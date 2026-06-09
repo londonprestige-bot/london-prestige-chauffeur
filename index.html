@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London Prestige Chauffeur | Elite Chauffeur Service London</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-[#05070C] text-white overflow-x-hidden">
+
+    <!-- GLOBAL HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#05070C]/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <span class="text-xl font-bold tracking-widest text-white uppercase">London<span
+                        class="text-indigo-500 font-light">Prestige</span></span>
+            </a>
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide text-slate-300">
+                <a href="index.html" class="text-indigo-400 transition">Home</a>
+                <a href="about-us.html" class="hover:text-white transition">About Us</a>
+                <a href="fleet.html" class="hover:text-white transition">Our Fleet</a>
+                <a href="services.html" class="hover:text-white transition">Services</a>
+                <a href="contact-us.html" class="hover:text-white transition">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="contact-us.html"
+                    class="hidden sm:inline-flex items-center justify-center px-5 h-11 text-xs font-semibold uppercase tracking-wider text-black bg-white hover:bg-indigo-500 hover:text-white rounded transition duration-300">
+                    Book Chauffeur
+                </a>
+                <button class="lg:hidden text-white text-xl p-2 focus:outline-none" onclick="toggleMobileMenu()">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-[#05070C] border-b border-white/5 w-full px-6 py-4 space-y-3">
+            <a href="index.html" class="block text-indigo-400 font-medium">Home</a>
+            <a href="about-us.html" class="block text-slate-300 hover:text-white">About Us</a>
+            <a href="fleet.html" class="block text-slate-300 hover:text-white">Our Fleet</a>
+            <a href="services.html" class="block text-slate-300 hover:text-white">Services</a>
+            <a href="contact-us.html" class="block text-slate-300 hover:text-white">Contact</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section
+        class="relative min-h-screen flex flex-col justify-center items-center px-6 pt-20 bg-gradient-to-b from-indigo-950/20 via-[#05070C] to-[#05070C]">
+        <div
+            class="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=1920')] bg-cover bg-center opacity-20 mix-blend-luminosity">
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center mt-12">
+            <span
+                class="text-xs font-bold uppercase tracking-widest text-indigo-400 bg-indigo-500/10 px-4 py-2 rounded-full border border-indigo-500/20">First-Class
+                Executive Travel</span>
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white mt-6 leading-tight">Elite Chauffeur
+                Service <br><span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 via-slate-200 to-white">in
+                    London</span></h1>
+            <p class="text-slate-400 text-base md:text-lg mt-6 max-w-2xl mx-auto font-light leading-relaxed">Experience
+                uncompromised luxury, absolute privacy, and seamless punctuality with London's premier chauffeur service
+                tailored for corporate executives and VIPs.</p>
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <a href="fleet.html"
+                    class="px-8 h-12 inline-flex items-center text-xs font-bold uppercase tracking-widest bg-indigo-600 hover:bg-indigo-700 text-white rounded transition">Explore
+                    Fleet</a>
+                <a href="contact-us.html"
+                    class="px-8 h-12 inline-flex items-center text-xs font-bold uppercase tracking-widest border border-white/20 hover:border-white text-white rounded transition">Get
+                    A Quote</a>
+            </div>
+        </div>
+
+        <!-- FLOATING INQUIRY WIDGET -->
+        <div
+            class="relative z-10 w-full max-w-5xl mx-auto mt-16 bg-[#0B0F19]/90 backdrop-blur-xl border border-white/5 p-6 rounded-xl shadow-2xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">Pick-up
+                        Location</label>
+                    <div class="relative"><i
+                            class="fa-solid fa-location-dot absolute left-3 top-3.5 text-slate-500 text-xs"></i><input
+                            type="text" placeholder="e.g., Heathrow Airport"
+                            class="w-full bg-white/5 border border-white/10 rounded px-9 h-11 text-sm text-white focus:outline-none focus:border-indigo-500">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">Drop-off
+                        Location</label>
+                    <div class="relative"><i
+                            class="fa-solid fa-flag absolute left-3 top-3.5 text-slate-500 text-xs"></i><input
+                            type="text" placeholder="e.g., Central London"
+                            class="w-full bg-white/5 border border-white/10 rounded px-9 h-11 text-sm text-white focus:outline-none focus:border-indigo-500">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">Select
+                        Date</label>
+                    <div class="relative"><i
+                            class="fa-solid fa-calendar absolute left-3 top-3.5 text-slate-500 text-xs"></i><input
+                            type="date"
+                            class="w-full bg-white/5 border border-white/10 rounded px-9 h-11 text-sm text-white focus:outline-none focus:border-indigo-500 text-slate-400">
+                    </div>
+                </div>
+                <div class="flex items-end">
+                    <a href="contact-us.html"
+                        class="w-full h-11 bg-white hover:bg-indigo-500 text-black hover:text-white font-bold uppercase tracking-wider text-xs flex items-center justify-center rounded transition duration-300">Check
+                        Availability</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="bg-[#020306] border-t border-white/5 pt-16 pb-8 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4">London Prestige</h4>
+                <p class="text-slate-400 text-xs leading-relaxed font-light">The premier custom luxury transport
+                    provider across London and surrounding airports, handling accounts with pristine executive
+                    discretion.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-xs text-slate-400 font-light">
+                    <li><a href="about-us.html" class="hover:text-indigo-400">About Our Company</a></li>
+                    <li><a href="fleet.html" class="hover:text-indigo-400">Our Chauffeur Fleet</a></li>
+                    <li><a href="services.html" class="hover:text-indigo-400">Premium Services</a></li>
+                    <li><a href="contact-us.html" class="hover:text-indigo-400">Secure Online Booking</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Our Services</h4>
+                <ul class="space-y-2 text-xs text-slate-400 font-light">
+                    <li><a href="services.html" class="hover:text-indigo-400">Airport Transfers</a></li>
+                    <li><a href="services.html" class="hover:text-indigo-400">Corporate Travel</a></li>
+                    <li><a href="services.html" class="hover:text-indigo-400">Private Event Hire</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Contact Us</h4>
+                <p class="text-slate-400 text-xs font-light leading-relaxed">London, United Kingdom<br>Email:
+                    info@londonprestigechauffeur.com<br>Available 24 Hours / 7 Days</p>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto border-t border-white/5 pt-6 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500 font-light tracking-wide">
+            <p>&copy; 2026 London Prestige Chauffeur. All rights reserved.</p>
+            <p>Managed by AITS-Official</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            var menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("hidden");
+        }
+    </script>
+</body>
+
+</html>

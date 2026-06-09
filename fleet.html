@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Luxury Fleet | London Prestige Chauffeur</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-[#05070C] text-white overflow-x-hidden">
+
+    <!-- GLOBAL HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#05070C]/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <span class="text-xl font-bold tracking-widest text-white uppercase">London<span
+                        class="text-indigo-500 font-light">Prestige</span></span>
+            </a>
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide text-slate-300">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="about-us.html" class="hover:text-white transition">About Us</a>
+                <a href="fleet.html" class="text-indigo-400 transition">Our Fleet</a>
+                <a href="services.html" class="hover:text-white transition">Services</a>
+                <a href="contact-us.html" class="hover:text-white transition">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="contact-us.html"
+                    class="hidden sm:inline-flex items-center justify-center px-5 h-11 text-xs font-semibold uppercase tracking-wider text-black bg-white hover:bg-indigo-500 hover:text-white rounded transition duration-300">
+                    Book Chauffeur
+                </a>
+                <button class="lg:hidden text-white text-xl p-2 focus:outline-none" onclick="toggleMobileMenu()">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-[#05070C] border-b border-white/5 w-full px-6 py-4 space-y-3">
+            <a href="index.html" class="block text-slate-300 hover:text-white">Home</a>
+            <a href="about-us.html" class="block text-slate-300 hover:text-white">About Us</a>
+            <a href="fleet.html" class="block text-indigo-400 font-medium">Our Fleet</a>
+            <a href="services.html" class="block text-slate-300 hover:text-white">Services</a>
+            <a href="contact-us.html" class="block text-slate-300 hover:text-white">Contact</a>
+        </div>
+    </header>
+
+    <!-- FLEET HERO HEADER -->
+    <section class="relative pt-40 pb-20 px-6 bg-gradient-to-b from-indigo-950/10 to-[#05070C]">
+        <div
+            class="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=1920')] bg-cover bg-center opacity-10 mix-blend-luminosity">
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <h1 class="text-3xl md:text-5xl font-bold tracking-tight">Our Chauffeur Driven Fleet</h1>
+            <p class="text-indigo-400 text-sm md:text-base mt-4 max-w-2xl mx-auto font-light tracking-wide">An elite
+                selection of the world's finest premium vehicles, meticulously detailed and maintained for total
+                executive comfort.</p>
+        </div>
+    </section>
+
+    <!-- VEHICLE SHOWROOM GRID -->
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- Mercedes-Benz S-Class -->
+            <div
+                class="bg-[#0B0F19]/40 border border-white/5 rounded-xl overflow-hidden hover:border-indigo-500/30 transition duration-300 flex flex-col justify-between">
+                <div class="h-64 bg-slate-900 relative">
+                    <div
+                        class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=800')] bg-cover bg-center opacity-40">
+                    </div>
+                    <span
+                        class="absolute top-4 right-4 bg-indigo-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded">Executive
+                        Class</span>
+                </div>
+                <div class="p-6 md:p-8">
+                    <h3 class="text-xl font-bold tracking-tight mb-2">Mercedes-Benz S-Class</h3>
+                    <p class="text-slate-400 text-xs font-light leading-relaxed mb-6">The definitive standard for luxury
+                        business travel in London. Features extended legroom, heated leather seats, ambient lightning,
+                        and total acoustic insulation for quiet inner-city transfers.</p>
+                    <div
+                        class="flex items-center gap-6 text-slate-400 text-xs font-medium border-t border-white/5 pt-4 mb-6">
+                        <span><i class="fa-solid fa-users text-indigo-400 mr-2"></i> 3 Passengers</span>
+                        <span><i class="fa-solid fa-briefcase text-indigo-400 mr-2"></i> 2 Luggage Bags</span>
+                    </div>
+                    <a href="contact-us.html"
+                        class="w-full h-11 bg-white hover:bg-indigo-600 text-black hover:text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center rounded transition duration-300">Book
+                        This Vehicle</a>
+                </div>
+            </div>
+
+            <!-- Mercedes-Benz V-Class XL -->
+            <div
+                class="bg-[#0B0F19]/40 border border-white/5 rounded-xl overflow-hidden hover:border-indigo-500/30 transition duration-300 flex flex-col justify-between">
+                <div class="h-64 bg-slate-900 relative">
+                    <div
+                        class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1622325574513-8cfb0eb6be21?q=80&w=800')] bg-cover bg-center opacity-30">
+                    </div>
+                    <span
+                        class="absolute top-4 right-4 bg-indigo-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded">Luxury
+                        MPV</span>
+                </div>
+                <div class="p-6 md:p-8">
+                    <h3 class="text-xl font-bold tracking-tight mb-2">Mercedes-Benz V-Class XL</h3>
+                    <p class="text-slate-400 text-xs font-light leading-relaxed mb-6">Perfect for high-profile group
+                        corporate movements, family airport runs, or mobile conferences. Offers spacious face-to-face
+                        seating arrangements, rear climate control, and massive trunk layout capacity.</p>
+                    <div
+                        class="flex items-center gap-6 text-slate-400 text-xs font-medium border-t border-white/5 pt-4 mb-6">
+                        <span><i class="fa-solid fa-users text-indigo-400 mr-2"></i> 7 Passengers</span>
+                        <span><i class="fa-solid fa-briefcase text-indigo-400 mr-2"></i> 5 Luggage Bags</span>
+                    </div>
+                    <a href="contact-us.html"
+                        class="w-full h-11 bg-white hover:bg-indigo-600 text-black hover:text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center rounded transition duration-300">Book
+                        This Vehicle</a>
+                </div>
+            </div>
+
+            <!-- Range Rover Autobiography -->
+            <div
+                class="bg-[#0B0F19]/40 border border-white/5 rounded-xl overflow-hidden hover:border-indigo-500/30 transition duration-300 flex flex-col justify-between">
+                <div class="h-64 bg-slate-900 relative">
+                    <div
+                        class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?q=80&w=800')] bg-cover bg-center opacity-30">
+                    </div>
+                    <span
+                        class="absolute top-4 right-4 bg-indigo-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded">First
+                        Class SUV</span>
+                </div>
+                <div class="p-6 md:p-8">
+                    <h3 class="text-xl font-bold tracking-tight mb-2">Range Rover Autobiography</h3>
+                    <p class="text-slate-400 text-xs font-light leading-relaxed mb-6">Commanding presence paired with
+                        absolute privacy windows. Excellent choice for VIP security travel, bespoke London city
+                        excursions, and premium luxury event arrivals.</p>
+                    <div
+                        class="flex items-center gap-6 text-slate-400 text-xs font-medium border-t border-white/5 pt-4 mb-6">
+                        <span><i class="fa-solid fa-users text-indigo-400 mr-2"></i> 4 Passengers</span>
+                        <span><i class="fa-solid fa-briefcase text-indigo-400 mr-2"></i> 3 Luggage Bags</span>
+                    </div>
+                    <a href="contact-us.html"
+                        class="w-full h-11 bg-white hover:bg-indigo-600 text-black hover:text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center rounded transition duration-300">Book
+                        This Vehicle</a>
+                </div>
+            </div>
+
+            <!-- Mercedes-Benz E-Class -->
+            <div
+                class="bg-[#0B0F19]/40 border border-white/5 rounded-xl overflow-hidden hover:border-indigo-500/30 transition duration-300 flex flex-col justify-between">
+                <div class="h-64 bg-slate-900 relative">
+                    <div
+                        class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800')] bg-cover bg-center opacity-30">
+                    </div>
+                    <span
+                        class="absolute top-4 right-4 bg-indigo-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded">Business
+                        Class</span>
+                </div>
+                <div class="p-6 md:p-8">
+                    <h3 class="text-xl font-bold tracking-tight mb-2">Mercedes-Benz E-Class</h3>
+                    <p class="text-slate-400 text-xs font-light leading-relaxed mb-6">The ideal workhorse for daily
+                        executive commutes, general intercity point-to-point travel, and highly efficient corporate
+                        airport transfers without compromising elegance.</p>
+                    <div
+                        class="flex items-center gap-6 text-slate-400 text-xs font-medium border-t border-white/5 pt-4 mb-6">
+                        <span><i class="fa-solid fa-users text-indigo-400 mr-2"></i> 3 Passengers</span>
+                        <span><i class="fa-solid fa-briefcase text-indigo-400 mr-2"></i> 2 Luggage Bags</span>
+                    </div>
+                    <a href="contact-us.html"
+                        class="w-full h-11 bg-white hover:bg-indigo-600 text-black hover:text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center rounded transition duration-300">Book
+                        This Vehicle</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ONBOARD AMENITIES BANNER -->
+    <section class="border-t border-white/5 bg-[#080B12] py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-center text-xs font-bold uppercase tracking-widest text-slate-500 mb-10">Premium Inclusions
+                In Every Journey</h3>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center text-xs text-slate-300 font-light">
+                <div class="p-4"><i class="fa-solid fa-bottle-water text-xl text-indigo-500 mb-3 block"></i> Chilled
+                    Mineral Water</div>
+                <div class="p-4"><i class="fa-solid fa-wifi text-xl text-indigo-500 mb-3 block"></i> High-Speed Onboard
+                    4G Wi-Fi</div>
+                <div class="p-4"><i class="fa-solid fa-newspaper text-xl text-indigo-500 mb-3 block"></i> Daily
+                    Newspaper & Magazines</div>
+                <div class="p-4"><i class="fa-solid fa-bolt text-xl text-indigo-500 mb-3 block"></i> Multi-device
+                    Charging Cables</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="bg-[#020306] border-t border-white/5 pt-16 pb-8 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4">London Prestige</h4>
+                <p class="text-slate-400 text-xs leading-relaxed font-light">The premier custom luxury transport
+                    provider across London and surrounding airports, handling accounts with pristine executive
+                    discretion.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-xs text-slate-400 font-light">
+                    <li><a href="about-us.html" class="hover:text-indigo-400">About Our Company</a></li>
+                    <li><a href="fleet.html" class="hover:text-indigo-400">Our Chauffeur Fleet</a></li>
+                    <li><a href="services.html" class="hover:text-indigo-400">Premium Services</a></li>
+                    <li><a href="contact-us.html" class="hover:text-indigo-400">Secure Online Booking</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Our Services</h4>
+                <ul class="space-y-2 text-xs text-slate-400 font-light">
+                    <li><a href="services.html" class="hover:text-indigo-400">Airport Transfers</a></li>
+                    <li><a href="services.html" class="hover:text-indigo-400">Corporate Travel</a></li>
+                    <li><a href="services.html" class="hover:text-indigo-400">Private Event Hire</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Contact Us</h4>
+                <p class="text-slate-400 text-xs font-light leading-relaxed">London, United Kingdom<br>Email:
+                    info@londonprestigechauffeur.com<br>Available 24 Hours / 7 Days</p>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto border-t border-white/5 pt-6 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500 font-light tracking-wide">
+            <p>&copy; 2026 London Prestige Chauffeur. All rights reserved.</p>
+            <p>Managed by AITS-Official</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            var menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("hidden");
+        }
+    </script>
+</body>
+
+</html>

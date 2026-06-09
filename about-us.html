@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | London Prestige Chauffeur</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-[#05070C] text-white overflow-x-hidden">
+
+    <!-- GLOBAL HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#05070C]/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <span class="text-xl font-bold tracking-widest text-white uppercase">London<span
+                        class="text-indigo-500 font-light">Prestige</span></span>
+            </a>
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide text-slate-300">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="about-us.html" class="text-indigo-400 transition">About Us</a>
+                <a href="fleet.html" class="hover:text-white transition">Our Fleet</a>
+                <a href="services.html" class="hover:text-white transition">Services</a>
+                <a href="contact-us.html" class="hover:text-white transition">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="contact-us.html"
+                    class="hidden sm:inline-flex items-center justify-center px-5 h-11 text-xs font-semibold uppercase tracking-wider text-black bg-white hover:bg-indigo-500 hover:text-white rounded transition duration-300">
+                    Book Chauffeur
+                </a>
+                <button class="lg:hidden text-white text-xl p-2 focus:outline-none" onclick="toggleMobileMenu()">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-[#05070C] border-b border-white/5 w-full px-6 py-4 space-y-3">
+            <a href="index.html" class="block text-slate-300 hover:text-white">Home</a>
+            <a href="about-us.html" class="block text-indigo-400 font-medium">About Us</a>
+            <a href="fleet.html" class="block text-slate-300 hover:text-white">Our Fleet</a>
+            <a href="services.html" class="block text-slate-300 hover:text-white">Services</a>
+            <a href="contact-us.html" class="block text-slate-300 hover:text-white">Contact</a>
+        </div>
+    </header>
+
+    <!-- SUB-HERO BANNER -->
+    <section class="relative pt-40 pb-20 px-6 bg-gradient-to-b from-indigo-950/10 to-[#05070C]">
+        <div
+            class="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1920')] bg-cover bg-center opacity-10 mix-blend-luminosity">
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <h1 class="text-3xl md:text-5xl font-bold tracking-tight">About Our Prestige Service</h1>
+            <p class="text-indigo-400 text-sm md:text-base mt-4 max-w-2xl mx-auto font-light tracking-wide">Setting the
+                gold standard for luxury, privacy, and elite ground transport across London since 2012.</p>
+        </div>
+    </section>
+
+    <!-- OUR STORY & MISSION -->
+    <section class="py-20 px-6 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+            <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Our Heritage</span>
+            <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-3 mb-6">Redefining Executive Chauffeur
+                Excellence</h2>
+            <p class="text-slate-400 text-sm font-light leading-relaxed mb-4">London Prestige Chauffeur was founded with
+                a singular mission: to provide high-net-worth individuals, corporate elites, and international travelers
+                with unmatched premium travel protocols.</p>
+            <p class="text-slate-400 text-sm font-light leading-relaxed">Every driver in our service holds full PCO
+                licensing, undergoes strict security vetting, and follows rigorous corporate styling guidelines. We
+                understand that discretion and precision aren't just preferences—they are business essentials.</p>
+        </div>
+        <div class="bg-[#0B0F19] border border-white/5 p-8 rounded-xl shadow-xl">
+            <h3 class="text-lg font-semibold text-white mb-4"><i
+                    class="fa-solid fa-shield-halved text-indigo-400 mr-2"></i> Our Core Promise</h3>
+            <ul class="space-y-4 text-xs text-slate-300 font-light">
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i>
+                    <span><strong>Absolute Confidentiality:</strong> Non-disclosure compliance for all corporate
+                        accounts and executive movements.</span></li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i>
+                    <span><strong>Flawless Punctuality:</strong> Chauffeurs arrive exactly 15 minutes before scheduled
+                        pick-up times.</span></li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i>
+                    <span><strong>Immaculate Fleet:</strong> Every single car undergoes daily safety inspections and
+                        deep sanitization detailing.</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- STAT COUNTERS GRID -->
+    <section class="border-y border-white/5 bg-[#080B12] py-16 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <p class="text-3xl md:text-4xl font-bold text-white tracking-tight">15+</p>
+                <p class="text-slate-500 text-[11px] font-bold uppercase tracking-wider mt-2">Years of Excellence</p>
+            </div>
+            <div>
+                <p class="text-3xl md:text-4xl font-bold text-indigo-400 tracking-tight">500k+</p>
+                <p class="text-slate-500 text-[11px] font-bold uppercase tracking-wider mt-2">Luxury Miles Driven</p>
+            </div>
+            <div>
+                <p class="text-3xl md:text-4xl font-bold text-white tracking-tight">100%</p>
+                <p class="text-slate-500 text-[11px] font-bold uppercase tracking-wider mt-2">Punctuality Rate</p>
+            </div>
+            <div>
+                <p class="text-3xl md:text-4xl font-bold text-indigo-400 tracking-tight">50+</p>
+                <p class="text-slate-500 text-[11px] font-bold uppercase tracking-wider mt-2">Elite Chauffeurs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE PILLARS SECTION -->
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Why Choose Us</span>
+            <h2 class="text-2xl md:text-4xl font-bold tracking-tight mt-2">Built Upon Pillars of Trust</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div
+                class="bg-[#0B0F19]/50 border border-white/5 p-8 rounded-xl hover:border-white/10 transition duration-300">
+                <i class="fa-solid fa-plane-arrival text-2xl text-indigo-500 mb-4"></i>
+                <h3 class="text-base font-semibold mb-3">Flight & Traffic Monitoring</h3>
+                <p class="text-slate-400 text-xs font-light leading-relaxed">We constantly track live flights and
+                    intelligent London traffic patterns to make immediate alterations, guaranteeing hassle-free airport
+                    pickups.</p>
+            </div>
+            <div
+                class="bg-[#0B0F19]/50 border border-white/5 p-8 rounded-xl hover:border-white/10 transition duration-300">
+                <i class="fa-solid fa-briefcase text-2xl text-indigo-500 mb-4"></i>
+                <h3 class="text-base font-semibold mb-3">Tailored Corporate Accounts</h3>
+                <p class="text-slate-400 text-xs font-light leading-relaxed">Streamlined, centralized monthly billing
+                    structures with dedicated premium support agents assigned exclusively to your administrative staff.
+                </p>
+            </div>
+            <div
+                class="bg-[#0B0F19]/50 border border-white/5 p-8 rounded-xl hover:border-white/10 transition duration-300">
+                <i class="fa-solid fa-user-tie text-2xl text-indigo-500 mb-4"></i>
+                <h3 class="text-base font-semibold mb-3">Elite Professional Protocols</h3>
+                <p class="text-slate-400 text-xs font-light leading-relaxed">All drivers strictly maintain high-end dark
+                    suits and polished execution protocols, delivering a seamless extensions of your own brand presence.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="bg-[#020306] border-t border-white/5 pt-16 pb-8 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4">London Prestige</h4>
+                <p class="text-slate-400 text-xs leading-relaxed font-light">The premier custom luxury transport
+                    provider across London and surrounding airports, handling accounts with pristine executive
+                    discretion.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-xs text-slate-400 font-light">
+                    <li><a href="about-us.html" class="hover:text-indigo-400">About Our Company</a></li>
+                    <li><a href="fleet.html" class="hover:text-indigo-400">Our Chauffeur Fleet</a></li>
+                    <li><a href="services.html" class="hover:text-indigo-400">Premium Services</a></li>
+                    <li><a href="contact-us.html" class="hover:text-indigo-400">Secure Online Booking</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Our Services</h4>
+                <ul class="space-y-2 text-xs text-slate-400 font-light">
+                    <li><a href="services.html" class="hover:text-indigo-400">Airport Transfers</a></li>
+                    <li><a href="services.html" class="hover:text-indigo-400">Corporate Travel</a></li>
+                    <li><a href="services.html" class="hover:text-indigo-400">Private Event Hire</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Contact Us</h4>
+                <p class="text-slate-400 text-xs font-light leading-relaxed">London, United Kingdom<br>Email:
+                    info@londonprestigechauffeur.com<br>Available 24 Hours / 7 Days</p>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto border-t border-white/5 pt-6 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500 font-light tracking-wide">
+            <p>&copy; 2026 London Prestige Chauffeur. All rights reserved.</p>
+            <p>Managed by AITS-Official</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            var menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("hidden");
+        }
+    </script>
+</body>
+
+</html>
