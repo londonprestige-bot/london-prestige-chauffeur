@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now | London Prestige Chauffeur</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Premium Google Autocomplete styling matching the layout */
+        .pac-container {
+            background-color: #111111 !important;
+            border: 1px solid #27272a !important;
+            font-family: inherit;
+            z-index: 99999;
+        }
+
+        .pac-item {
+            color: #ffffff !important;
+            border-top: 1px solid #18181b !important;
+            padding: 12px !important;
+            cursor: pointer;
+        }
+
+        .pac-item:hover {
+            background-color: #18181b !important;
+        }
+
+        .pac-item-query {
+            color: #ff6600 !important;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0b0b0c] text-white overflow-x-hidden">
+
+    <!-- ================= GLOBAL HEADER (Exactly as requested from image_4ed549.png) ================= -->
+    <header class="w-full z-50 bg-black/90 backdrop-blur-md border-b border-zinc-900 sticky top-0">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <!-- Logo Container -->
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold tracking-widest text-white uppercase font-serif">London</span>
+                    <span class="text-xs tracking-[0.3em] text-[#ff6600] font-bold uppercase -mt-1">Prestige</span>
+                    <span class="text-[9px] tracking-[0.4em] text-zinc-500 uppercase">Chauffeur</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links Menu -->
+            <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider">
+                <a href="index.html" class="text-zinc-400 hover:text-white transition">Home</a>
+                <a href="about-us.html" class="text-zinc-400 hover:text-white transition">About Us</a>
+                <a href="services.html" class="text-zinc-400 hover:text-white transition flex items-center gap-1">Our
+                    Services <i class="fa-solid fa-chevron-down text-[8px]"></i></a>
+                <a href="fleet.html" class="text-zinc-400 hover:text-white transition flex items-center gap-1">Our Fleet
+                    <i class="fa-solid fa-chevron-down text-[8px]"></i></a>
+                <a href="booking.html"
+                    class="bg-[#ff6600] text-white px-5 py-2.5 rounded-full font-bold transition shadow-md shadow-[#ff6600]/10">Book
+                    Now</a>
+                <a href="contact.html" class="text-zinc-400 hover:text-white transition">Contact Us</a>
+            </nav>
+
+            <!-- Right Header Actions (Phone & Language) -->
+            <div class="hidden lg:flex items-center gap-6">
+                <a href="tel:+442038277777"
+                    class="border border-zinc-800 bg-zinc-950/50 px-5 py-2.5 rounded-full text-xs font-bold tracking-wider text-white hover:border-[#ff6600] transition flex items-center gap-2">
+                    <i class="fa-solid fa-phone text-[#ff6600]"></i> +44 203 827 7777
+                </a>
+                <div class="flex items-center gap-1 text-xs font-medium text-zinc-400 cursor-pointer">
+                    <img src="https://flagcdn.com/w20/gb.png" class="w-4 h-3 object-cover rounded-sm" alt="UK Flag">
+                    <span>English</span> <i class="fa-solid fa-chevron-down text-[8px] text-zinc-600"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= HERO TITLE BANNER ================= -->
+    <div class="bg-gradient-to-b from-black to-[#0b0b0c] text-center py-16 border-b border-zinc-900">
+        <h1 class="text-5xl font-bold tracking-tight mb-3 font-serif">Book Now</h1>
+        <p class="text-xs text-zinc-500 uppercase tracking-widest">
+            <a href="index.html" class="hover:text-white transition">Home</a> <span class="mx-2 text-zinc-700">/</span>
+            Book Now
+        </p>
+    </div>
+
+    <!-- ================= RESERVATION ENGINE INTERFACE ================= -->
+    <div class="max-w-6xl mx-auto px-4 py-16">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold tracking-wide mb-4 font-serif">Make Your Reservation</h2>
+            <p class="text-zinc-400 text-sm leading-relaxed">
+                Book your luxury chauffeur service effortlessly. Let us take care of the details while you enjoy a
+                seamless and sophisticated travel experience.
+            </p>
+        </div>
+
+        <!-- 4-Step Animated Progress Indicator Line -->
+        <div class="grid grid-cols-4 gap-2 text-center max-w-4xl mx-auto mb-16 relative">
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-10 h-10 bg-[#ff6600] text-white font-bold rounded-full flex items-center justify-center text-sm shadow-md shadow-[#ff6600]/20 mb-3">
+                    1</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-white">Enter Ride Details</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-10 h-10 bg-zinc-900 border border-zinc-800 text-zinc-500 font-bold rounded-full flex items-center justify-center text-sm mb-3">
+                    2</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-500">Choose a Vehicle</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-10 h-10 bg-zinc-900 border border-zinc-800 text-zinc-500 font-bold rounded-full flex items-center justify-center text-sm mb-3">
+                    3</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-500">Enter Contact Details</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-10 h-10 bg-zinc-900 border border-zinc-800 text-zinc-500 font-bold rounded-full flex items-center justify-center text-sm mb-3">
+                    4</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-500">Booking Summary</span>
+            </div>
+        </div>
+
+        <!-- Main Live Booking Core Panel Split Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+
+            <!-- Left Side Module Form Inputs Block -->
+            <div class="lg:col-span-6 bg-[#030303] rounded-sm border border-zinc-900 flex flex-col justify-between">
+                <!-- System Navigation Tabs -->
+                <div class="flex border-b border-zinc-900">
+                    <button id="tab-distance"
+                        class="flex-1 py-4 text-center font-bold text-xs tracking-widest uppercase bg-[#ff6600] text-white transition focus:outline-none">
+                        Distance
+                    </button>
+                    <button id="tab-hourly"
+                        class="flex-1 py-4 text-center font-bold text-xs tracking-widest uppercase bg-[#111112] text-zinc-400 hover:text-white transition focus:outline-none">
+                        Hourly
+                    </button>
+                </div>
+
+                <!-- Input Data Parameters Container -->
+                <div class="p-8 space-y-6 flex-1">
+                    <h3 class="text-xs font-bold text-zinc-400 uppercase tracking-widest border-b border-zinc-900 pb-2">
+                        Ride Details</h3>
+
+                    <!-- Pickup Timing Configurations -->
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label
+                                class="text-[10px] font-bold uppercase tracking-widest text-zinc-500 flex items-center gap-1">
+                                Pickup Date <i class="fa-regular fa-circle-question text-zinc-700"></i>
+                            </label>
+                            <input type="date"
+                                class="w-full bg-zinc-950 border border-zinc-800 p-3 text-sm text-white focus:outline-none focus:border-[#ff6600] rounded-sm">
+                        </div>
+                        <div class="space-y-2">
+                            <label
+                                class="text-[10px] font-bold uppercase tracking-widest text-zinc-500 flex items-center gap-1">
+                                Pickup Time <i class="fa-regular fa-circle-question text-zinc-700"></i>
+                            </label>
+                            <input type="time"
+                                class="w-full bg-zinc-950 border border-zinc-800 p-3 text-sm text-white focus:outline-none focus:border-[#ff6600] rounded-sm">
+                        </div>
+                    </div>
+
+                    <!-- Pickup Location Field -->
+                    <div class="space-y-2 relative">
+                        <label
+                            class="text-[10px] font-bold uppercase tracking-widest text-zinc-500 flex items-center gap-1">
+                            Pickup Location <i class="fa-regular fa-circle-question text-zinc-700"></i>
+                            <span class="text-[#ff6600] ml-auto cursor-pointer"><i
+                                    class="fa-solid fa-plus text-xs"></i></span>
+                        </label>
+                        <input id="pickup-address" type="text" placeholder="Enter a location"
+                            class="w-full bg-zinc-950 border border-zinc-800 p-3 text-sm text-white placeholder-zinc-700 focus:outline-none focus:border-[#ff6600] rounded-sm">
+                    </div>
+
+                    <!-- Drop-off Destination Target Field -->
+                    <div id="dropoff-wrapper" class="space-y-2">
+                        <label
+                            class="text-[10px] font-bold uppercase tracking-widest text-zinc-500 flex items-center gap-1">
+                            Drop-off Location <i class="fa-regular fa-circle-question text-zinc-700"></i>
+                        </label>
+                        <input id="dropoff-address" type="text" placeholder="Enter a location"
+                            class="w-full bg-zinc-950 border border-zinc-800 p-3 text-sm text-white placeholder-zinc-700 focus:outline-none focus:border-[#ff6600] rounded-sm">
+                    </div>
+
+                    <!-- Dropdown Configurations -->
+                    <div class="space-y-2">
+                        <label id="dropdown-title"
+                            class="text-[10px] font-bold uppercase tracking-widest text-zinc-500 flex items-center gap-1">
+                            Transfer Type <i class="fa-regular fa-circle-question text-zinc-700"></i>
+                        </label>
+                        <div class="relative">
+                            <select id="transfer-select"
+                                class="w-full bg-zinc-950 border border-zinc-800 p-3 text-sm text-white focus:outline-none focus:border-[#ff6600] rounded-sm appearance-none cursor-pointer">
+                                <option value="one-way">One Way</option>
+                                <option value="return">Return Ride</option>
+                            </select>
+                            <span class="absolute right-3 top-4 text-zinc-600 pointer-events-none text-xs"><i
+                                    class="fa-solid fa-chevron-down"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Module: Functional Live Route Tracking Engine Map -->
+            <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                <!-- Live Map Frame Layer Component -->
+                <div id="map-canvas"
+                    class="w-full h-80 lg:h-full min-h-[340px] bg-zinc-950 rounded-sm border border-zinc-900 overflow-hidden relative">
+                    <!-- Live Interactive Map loads directly here inside DOM -->
+                </div>
+
+                <!-- Metric Values Status Logs Block Grid -->
+                <div class="grid grid-cols-2 gap-4 bg-[#030303] p-6 rounded-sm border border-zinc-900">
+                    <div class="flex items-center gap-4">
+                        <div class="text-[#ff6600] text-3xl"><i class="fa-solid fa-route"></i></div>
+                        <div>
+                            <span class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold block">Total
+                                Distance</span>
+                            <span id="label-distance" class="text-xl font-bold tracking-tight">0 mi</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="text-[#ff6600] text-3xl"><i class="fa-regular fa-clock"></i></div>
+                        <div>
+                            <span class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold block">Total
+                                Time</span>
+                            <span id="label-duration" class="text-xl font-bold tracking-tight">0h 0m</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primary Call to Action Processing Module Command -->
+                <div class="flex justify-end">
+                    <button id="submit-ride"
+                        class="w-full sm:w-auto px-8 py-4 bg-[#ff6600] text-white font-bold text-xs uppercase tracking-widest rounded-sm hover:bg-[#e05500] transition flex items-center justify-center gap-3 cursor-pointer">
+                        Choose a Vehicle <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Realtime Engine Integrations Script Core -->
+    <script>
+        // Tab Interaction Scripts Logic
+        const dTab = document.getElementById('tab-distance');
+        const hTab = document.getElementById('tab-hourly');
+        const dropoffBox = document.getElementById('dropoff-wrapper');
+        const selectTitle = document.getElementById('dropdown-title');
+        const selectMenu = document.getElementById('transfer-select');
+
+        dTab.addEventListener('click', () => {
+            dTab.className = "flex-1 py-4 text-center font-bold text-xs tracking-widest uppercase bg-[#ff6600] text-white transition focus:outline-none";
+            hTab.className = "flex-1 py-4 text-center font-bold text-xs tracking-widest uppercase bg-[#111112] text-zinc-400 hover:text-white transition focus:outline-none";
+            dropoffBox.style.display = 'block';
+            selectTitle.innerHTML = 'Transfer Type <i class="fa-regular fa-circle-question text-zinc-700"></i>';
+            selectMenu.innerHTML = '<option value="one-way">One Way</option><option value="return">Return Ride</option>';
+        });
+
+        hTab.addEventListener('click', () => {
+            hTab.className = "flex-1 py-4 text-center font-bold text-xs tracking-widest uppercase bg-[#ff6600] text-white transition focus:outline-none";
+            dTab.className = "flex-1 py-4 text-center font-bold text-xs tracking-widest uppercase bg-[#111112] text-zinc-400 hover:text-white transition focus:outline-none";
+            dropoffBox.style.display = 'none';
+            selectTitle.innerHTML = 'Duration (Hours) <i class="fa-regular fa-circle-question text-zinc-700"></i>';
+            selectMenu.innerHTML = '<option value="2">2 Hours</option><option value="4">4 Hours</option><option value="8">8 Hours</option><option value="12">12 Hours</option>';
+        });
+
+        // Dynamic Tracking Google Maps Integration Module
+        let coreMap, routeService, pathRenderer;
+        let autoPickup, autoDropoff;
+
+        function initBookingEngine() {
+            routeService = new google.maps.DirectionsService();
+
+            const premiumDarkTheme = [
+                { "elementType": "geometry", "stylers": [{ "color": "#171717" }] },
+                { "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] },
+                { "elementType": "labels.text.fill", "stylers": [{ "color": "#8a8a8a" }] },
+                { "featureType": "road", "elementType": "geometry.fill", "stylers": [{ "color": "#262626" }] },
+                { "featureType": "road", "elementType": "geometry.stroke", "stylers": [{ "color": "#1c1c1c" }] },
+                { "featureType": "water", "elementType": "geometry", "stylers": [{ "color": "#000000" }] }
+            ];
+
+            const defaultLondon = { lat: 51.5074, lng: -0.1278 };
+            coreMap = new google.maps.Map(document.getElementById("map-canvas"), {
+                zoom: 11,
+                center: defaultLondon,
+                styles: premiumDarkTheme,
+                disableDefaultUI: true,
+                zoomControl: true
+            });
+
+            pathRenderer = new google.maps.DirectionsRenderer({
+                map: coreMap,
+                polylineOptions: {
+                    strokeColor: "#ff6600",
+                    strokeOpacity: 0.9,
+                    strokeWeight: 5
+                }
+            });
+
+            const filterUk = { componentRestrictions: { country: "uk" } };
+            autoPickup = new google.maps.places.Autocomplete(document.getElementById("pickup-address"), filterUk);
+            autoDropoff = new google.maps.places.Autocomplete(document.getElementById("dropoff-address"), filterUk);
+
+            document.getElementById('submit-ride').addEventListener('click', calculateLiveRoutePath);
+            autoDropoff.addListener('place_changed', calculateLiveRoutePath);
+        }
+
+        function calculateLiveRoutePath() {
+            const startPoint = document.getElementById("pickup-address").value;
+            const endPoint = document.getElementById("dropoff-address").value;
+
+            if (!startPoint) return;
+            if (dropoffBox.style.display === 'none') {
+                // Hourly Layout Mode Active: Center location map view frame on target pickup marker points
+                const geocoder = new google.maps.Geocoder();
+                geocoder.geocode({ address: startPoint }, (res, status) => {
+                    if (status === 'OK') {
+                        coreMap.setCenter(res[0].geometry.location);
+                        coreMap.setZoom(14);
+                        new google.maps.Marker({ map: coreMap, position: res[0].geometry.location });
+                    }
+                });
+                return;
+            }
+
+            if (!endPoint) return;
+
+            routeService.route({
+                origin: startPoint,
+                destination: endPoint,
+                travelMode: google.maps.TravelMode.DRIVING,
+                unitSystem: google.maps.UnitSystem.IMPERIAL
+            }, (res, status) => {
+                if (status === "OK") {
+                    pathRenderer.setDirections(res);
+                    const metricLogs = res.routes[0].legs[0];
+                    document.getElementById("label-distance").innerText = metricLogs.distance.text;
+
+                    // Format duration structure to layout (e.g. 0h 45m)
+                    const rawDurationStr = metricLogs.duration.text;
+                    document.getElementById("label-duration").innerText = rawDurationStr;
+                }
+            });
+        }
+    </script>
+
+    <!-- Google Cloud API Script Loader Link Module Configs -->
+    <!-- NOTE: Inject your working operational system keys here inside placeholder below -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initBookingEngine"
+        async defer></script>
+
+</body>
+
+</html>
