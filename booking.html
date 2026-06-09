@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now | London Prestige Chauffeur</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-[#111111] text-white font-sans antialiased">
+
+    <!-- Header Banner Section (From image_4fc569.png) -->
+    <div class="bg-black text-center py-20 border-b border-zinc-900">
+        <h1 class="text-5xl font-bold tracking-tight mb-4">Book Now</h1>
+        <p class="text-sm text-zinc-500 uppercase tracking-widest">
+            <a href="index.html" class="hover:text-white transition">Home</a> <span class="mx-2">/</span> Book Now
+        </p>
+    </div>
+
+    <!-- Reservation Section -->
+    <div class="max-w-7xl mx-auto px-4 py-16">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-4xl font-bold mb-4">Make Your Reservation</h2>
+            <p class="text-zinc-400 text-base leading-relaxed">
+                Book your luxury chauffeur service effortlessly. Let us take care of the details while you enjoy a
+                seamless and sophisticated travel experience.
+            </p>
+        </div>
+
+        <!-- 4-Step Progress Bar (From image_4fc569.png) -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center max-w-5xl mx-auto mb-16 relative">
+            <!-- Step 1 (Active) -->
+            <div class="flex flex-col items-center group">
+                <div
+                    class="w-12 h-12 bg-[#ff6600] text-white font-bold rounded-full flex items-center justify-center text-lg shadow-lg shadow-[#ff6600]/20 mb-3 transition">
+                    1</div>
+                <span class="text-sm font-medium text-white">Enter Ride Details</span>
+            </div>
+            <!-- Step 2 -->
+            <div class="flex flex-col items-center group">
+                <div
+                    class="w-12 h-12 bg-zinc-900 border border-zinc-800 text-zinc-400 font-bold rounded-full flex items-center justify-center text-lg mb-3">
+                    2</div>
+                <span class="text-sm font-medium text-zinc-400">Choose a Vehicle</span>
+            </div>
+            <!-- Step 3 -->
+            <div class="flex flex-col items-center group">
+                <div
+                    class="w-12 h-12 bg-zinc-900 border border-zinc-800 text-zinc-400 font-bold rounded-full flex items-center justify-center text-lg mb-3">
+                    3</div>
+                <span class="text-sm font-medium text-zinc-400">Enter Contact Details</span>
+            </div>
+            <!-- Step 4 -->
+            <div class="flex flex-col items-center group">
+                <div
+                    class="w-12 h-12 bg-zinc-900 border border-zinc-800 text-zinc-400 font-bold rounded-full flex items-center justify-center text-lg mb-3">
+                    4</div>
+                <span class="text-sm font-medium text-zinc-400">Booking Summary</span>
+            </div>
+        </div>
+
+        <!-- Main Form & Map Container (From image_4fc569.png / image_4fc2bb.jpg) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+            <!-- Left Side: Interactive Booking Form -->
+            <div class="lg:col-span-6 bg-black rounded-xl overflow-hidden border border-zinc-900 shadow-2xl">
+                <!-- Tabs (Distance / Hourly) -->
+                <div class="flex border-b border-zinc-900">
+                    <button id="tab-distance"
+                        class="flex-1 py-4 text-center font-bold text-sm tracking-wider uppercase bg-[#ff6600] text-white transition focus:outline-none">
+                        Distance
+                    </button>
+                    <button id="tab-hourly"
+                        class="flex-1 py-4 text-center font-bold text-sm tracking-wider uppercase bg-zinc-950 text-zinc-400 hover:text-white transition focus:outline-none">
+                        Hourly
+                    </button>
+                </div>
+
+                <!-- Form Body -->
+                <div class="p-8 space-y-6">
+                    <h3 class="text-xs font-bold text-zinc-500 uppercase tracking-widest border-b border-zinc-900 pb-2">
+                        Ride Details</h3>
+
+                    <!-- Pickup Date & Time Row -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label
+                                class="text-xs font-semibold uppercase tracking-wider text-zinc-400 flex items-center gap-1">
+                                Pickup Date <i class="fa-regular fa-circle-question text-zinc-600 text-[10px]"></i>
+                            </label>
+                            <input type="date"
+                                class="w-full bg-zinc-950 border border-zinc-800 rounded-lg p-3 text-white focus:outline-none focus:border-[#ff6600] transition">
+                        </div>
+                        <div class="space-y-2">
+                            <label
+                                class="text-xs font-semibold uppercase tracking-wider text-zinc-400 flex items-center gap-1">
+                                Pickup Time <i class="fa-regular fa-circle-question text-zinc-600 text-[10px]"></i>
+                            </label>
+                            <input type="time"
+                                class="w-full bg-zinc-950 border border-zinc-800 rounded-lg p-3 text-white focus:outline-none focus:border-[#ff6600] transition">
+                        </div>
+                    </div>
+
+                    <!-- Pickup Location -->
+                    <div class="space-y-2 relative">
+                        <label
+                            class="text-xs font-semibold uppercase tracking-wider text-zinc-400 flex items-center gap-1">
+                            Pickup Location <i class="fa-regular fa-circle-question text-zinc-600 text-[10px]"></i>
+                            <span class="text-[#ff6600] ml-auto cursor-pointer"><i class="fa-solid fa-plus"></i></span>
+                        </label>
+                        <input type="text" placeholder="Enter a location"
+                            class="w-full bg-zinc-950 border border-zinc-800 rounded-lg p-4 text-white placeholder-zinc-600 focus:outline-none focus:border-[#ff6600] transition font-medium text-lg">
+                    </div>
+
+                    <!-- Drop-off Location -->
+                    <div id="dropoff-container" class="space-y-2">
+                        <label
+                            class="text-xs font-semibold uppercase tracking-wider text-zinc-400 flex items-center gap-1">
+                            Drop-off Location <i class="fa-regular fa-circle-question text-zinc-600 text-[10px]"></i>
+                        </label>
+                        <input type="text" placeholder="Enter a location"
+                            class="w-full bg-zinc-950 border border-zinc-800 rounded-lg p-4 text-white placeholder-zinc-600 focus:outline-none focus:border-[#ff6600] transition font-medium text-lg">
+                    </div>
+
+                    <!-- Transfer Type / Duration (Dynamic Dropdown) -->
+                    <div class="space-y-2">
+                        <label id="dropdown-label"
+                            class="text-xs font-semibold uppercase tracking-wider text-zinc-400 flex items-center gap-1">
+                            Transfer Type <i class="fa-regular fa-circle-question text-zinc-600 text-[10px]"></i>
+                        </label>
+                        <select
+                            class="w-full bg-zinc-950 border border-zinc-800 rounded-lg p-4 text-white focus:outline-none focus:border-[#ff6600] transition appearance-none cursor-pointer font-medium">
+                            <option value="one-way">One Way</option>
+                            <option value="return">Return Ride</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Live Tracking Map & Stats Dashboard -->
+            <div class="lg:col-span-6 space-y-6">
+                <!-- Visual Map Placeholder (Matches layout in image_4fc569.png / image_4fc2bb.jpg) -->
+                <div
+                    class="w-full h-80 bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 shadow-2xl relative">
+                    <!-- Temporary Static Graphic matching image_4fc569.png Map layout -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!11m14!10m8!1m3!1d158857.83988673243!2d-0.241681!3d51.5287714!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1710000000000!5m2!1sen!2suk"
+                        class="w-full h-full border-0 grayscale invert brightness-90 contrast-125" allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <!-- Realtime Trip Live Matrix Info Bar -->
+                <div class="grid grid-cols-2 gap-4 bg-black p-6 rounded-xl border border-zinc-900">
+                    <!-- Total Distance Info Segment -->
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 rounded-full border border-[#ff6600]/20 flex items-center justify-center text-[#ff6600] text-xl bg-[#ff6600]/5">
+                            <i class="fa-solid fa-route"></i>
+                        </div>
+                        <div>
+                            <span class="text-[11px] uppercase tracking-wider text-zinc-500 font-bold block">Total
+                                Distance</span>
+                            <span class="text-2xl font-bold text-white tracking-tight">0 mi</span>
+                        </div>
+                    </div>
+
+                    <!-- Total Duration Segment -->
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 rounded-full border border-[#ff6600]/20 flex items-center justify-center text-[#ff6600] text-xl bg-[#ff6600]/5">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <div>
+                            <span class="text-[11px] uppercase tracking-wider text-zinc-500 font-bold block">Total
+                                Time</span>
+                            <span class="text-2xl font-bold text-white tracking-tight">0 h 0 m</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action CTA Button Container -->
+                <div class="flex justify-end pt-4">
+                    <button
+                        class="w-full sm:w-auto px-8 py-4 bg-[#ff6600] text-white font-bold text-sm uppercase tracking-wider rounded-full hover:bg-[#e05500] transition flex items-center justify-center gap-3 shadow-lg shadow-[#ff6600]/20 cursor-pointer">
+                        Choose a Vehicle <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Tab Toggle Logic Script -->
+    <script>
+        const tabDistance = document.getElementById('tab-distance');
+        const tabHourly = document.getElementById('tab-hourly');
+        const dropoffContainer = document.getElementById('dropoff-container');
+        const dropdownLabel = document.getElementById('dropdown-label');
+
+        tabDistance.addEventListener('click', () => {
+            // Toggle Active Tab Styling
+            tabDistance.className = "flex-1 py-4 text-center font-bold text-sm tracking-wider uppercase bg-[#ff6600] text-white transition focus:outline-none";
+            tabHourly.className = "flex-1 py-4 text-center font-bold text-sm tracking-wider uppercase bg-zinc-950 text-zinc-400 hover:text-white transition focus:outline-none";
+            // Show Dropoff & Reset Input Dropdown Label
+            dropoffContainer.style.display = 'block';
+            dropdownLabel.innerHTML = 'Transfer Type <i class="fa-regular fa-circle-question text-zinc-600 text-[10px]"></i>';
+        });
+
+        tabHourly.addEventListener('click', () => {
+            // Toggle Active Tab Styling
+            tabHourly.className = "flex-1 py-4 text-center font-bold text-sm tracking-wider uppercase bg-[#ff6600] text-white transition focus:outline-none";
+            tabDistance.className = "flex-1 py-4 text-center font-bold text-sm tracking-wider uppercase bg-zinc-950 text-zinc-400 hover:text-white transition focus:outline-none";
+            // Hide Dropoff & Change Input Label to Duration
+            dropoffContainer.style.display = 'none';
+            dropdownLabel.innerHTML = 'Duration (Hours) <i class="fa-regular fa-circle-question text-zinc-600 text-[10px]"></i>';
+        });
+    </script>
+
+</body>
+
+</html>
