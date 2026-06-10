@@ -4,227 +4,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Booking & Contact | London Prestige Chauffeur</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
+    <title>Contact Our Elite Desk | London Prestige Chauffeur</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600&family=Playfair+Display:ital,wght=0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
-
     <style>
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        input,
+        textarea {
+            background-color: #0d0d0f !important;
+            border-color: #1f1f23 !important;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #ffffff !important;
+            outline: none;
         }
     </style>
 </head>
 
-<body class="bg-[#05070C] text-white overflow-x-hidden">
+<body class="bg-[#09090a] text-zinc-100 overflow-x-hidden antialiased">
 
-    <!-- GLOBAL HEADER -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-[#05070C]/80 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2">
-                <span class="text-xl font-bold tracking-widest text-white uppercase">London<span
-                        class="text-indigo-500 font-light">Prestige</span></span>
+    <!-- ================= ULTRA-LUXURY GLOBAL HEADER ================= -->
+    <header
+        class="w-full z-50 bg-black/90 backdrop-blur-md border-b border-zinc-900 sticky top-0 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="flex flex-col">
+                    <span
+                        class="text-2xl font-bold tracking-[0.2em] text-white uppercase font-serif transition group-hover:text-zinc-400">London</span>
+                    <span
+                        class="text-[10px] tracking-[0.43em] text-zinc-400 font-medium uppercase -mt-1">Prestige</span>
+                    <span class="text-[8px] tracking-[0.52em] text-zinc-600 uppercase">Chauffeur</span>
+                </div>
             </a>
-            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide text-slate-300">
-                <a href="index.html" class="hover:text-white transition">Home</a>
-                <a href="about-us.html" class="hover:text-white transition">About Us</a>
-                <a href="fleet.html" class="hover:text-white transition">Our Fleet</a>
-                <a href="services.html" class="hover:text-white transition">Services</a>
+
+            <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-[0.15em]">
+                <a href="index.html" class="text-zinc-400 hover:text-white transition">Home</a>
+                <a href="about-us.html" class="text-zinc-400 hover:text-white transition">About Us</a>
+                <a href="services.html" class="text-zinc-400 hover:text-white transition flex items-center gap-1">Our
+                    Services <i class="fa-solid fa-chevron-down text-[8px] text-zinc-600"></i></a>
+                <a href="fleet.html" class="text-zinc-400 hover:text-white transition flex items-center gap-1">Our Fleet
+                    <i class="fa-solid fa-chevron-down text-[8px] text-zinc-600"></i></a>
                 <a href="booking.html"
-                    class="bg-[#ff6600] text-white px-5 py-2.5 rounded-full font-bold transition">Book Now</a>
-                <a href="contact-us.html" class="text-indigo-400 transition">Contact</a>
+                    class="bg-white text-black px-6 py-3 rounded-none font-bold hover:bg-zinc-200 transition tracking-widest">Book
+                    Now</a>
+                <a href="contact.html" class="text-white border-b border-white pb-1 transition">Contact Us</a>
             </nav>
-            <div class="flex items-center gap-4">
-                <a href="contact-us.html"
-                    class="hidden sm:inline-flex items-center justify-center px-5 h-11 text-xs font-semibold uppercase tracking-wider text-black bg-white rounded hover:bg-indigo-500 hover:text-white transition duration-300">
-                    Book Chauffeur
+
+            <div class="hidden lg:flex items-center gap-6">
+                <a href="tel:+442038277777"
+                    class="border border-zinc-800 bg-zinc-950 px-5 py-2.5 rounded-none text-xs font-bold tracking-widest text-white hover:border-white transition flex items-center gap-2">
+                    <i class="fa-solid fa-phone text-zinc-400"></i> +44 203 827 7777
                 </a>
-                <button class="lg:hidden text-white text-xl p-2 focus:outline-none" onclick="toggleMobileMenu()">
-                    <i class="fa-solid fa-bars-staggered"></i>
-                </button>
             </div>
-        </div>
-        <!-- Mobile Drawer -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-[#05070C] border-b border-white/5 w-full px-6 py-4 space-y-3">
-            <a href="index.html" class="block text-slate-300 hover:text-white">Home</a>
-            <a href="about-us.html" class="block text-slate-300 hover:text-white">About Us</a>
-            <a href="fleet.html" class="block text-slate-300 hover:text-white">Our Fleet</a>
-            <a href="services.html" class="block text-slate-300 hover:text-white">Services</a>
-            <a href="contact-us.html" class="block text-indigo-400 font-medium">Contact</a>
         </div>
     </header>
 
-    <!-- HERO HEADER -->
-    <section class="relative pt-40 pb-12 px-6 bg-gradient-to-b from-indigo-950/10 to-[#05070C]">
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <h1 class="text-3xl md:text-5xl font-bold tracking-tight">Secure Bespoke Booking</h1>
-            <p class="text-indigo-400 text-sm md:text-base mt-4 max-w-xl mx-auto font-light tracking-wide">Request a
-                tailored quotation or manage your upcoming corporate transit setup instantly.</p>
-        </div>
+    <!-- ================= HERO EXPOSITION ================= -->
+    <section class="py-20 text-center max-w-3xl mx-auto px-6 space-y-4">
+        <span class="text-[10px] tracking-[0.5em] text-zinc-500 font-bold uppercase block">Global Operations
+            Support</span>
+        <h1 class="text-4xl font-serif text-white tracking-wide">Connect With Our Desk</h1>
+        <div class="w-16 h-px bg-zinc-800 mx-auto"></div>
     </section>
 
-    <!-- CONTACT & FORM SPLIT SECTION -->
-    <section class="py-12 px-6 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <!-- ================= DUAL CORE SECTION ================= -->
+    <section class="pb-28 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16">
 
-        <!-- Left Side: Corporate Details -->
-        <div class="lg:col-span-4 space-y-8">
-            <div>
-                <h3 class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-2">Central Operations</h3>
-                <h2 class="text-xl font-bold tracking-tight mb-4">Get In Touch</h2>
-                <p class="text-slate-400 text-xs font-light leading-relaxed">Our client concierge managers operate 24
-                    hours a day, 7 days a week to accommodate dynamic routing requests and high-profile protocol
-                    handling.</p>
+        <!-- Left Column: Executive Direct Touchpoints -->
+        <div class="lg:col-span-5 space-y-12">
+
+            <div class="space-y-6">
+                <h3 class="text-xs uppercase font-serif tracking-[0.2em] text-zinc-400 border-b border-zinc-900 pb-2">
+                    Central Operations</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-10 h-10 border border-zinc-900 bg-zinc-950 flex items-center justify-center shrink-0 text-white">
+                            <i class="fa-solid fa-phone text-xs"></i>
+                        </div>
+                        <div>
+                            <span
+                                class="text-[10px] uppercase text-zinc-500 tracking-wider font-semibold block">Immediate
+                                Response Line</span>
+                            <a href="tel:+442038277777"
+                                class="text-sm font-medium hover:text-zinc-400 transition block mt-0.5">+44 203 827
+                                7777</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-10 h-10 border border-zinc-900 bg-zinc-950 flex items-center justify-center shrink-0 text-white">
+                            <i class="fa-solid fa-envelope text-xs"></i>
+                        </div>
+                        <div>
+                            <span
+                                class="text-[10px] uppercase text-zinc-500 tracking-wider font-semibold block">Electronic
+                                Briefings Desk</span>
+                            <a href="mailto:info@londonprestigechauffeur.com"
+                                class="text-sm font-medium hover:text-zinc-400 transition block mt-0.5">info@londonprestigechauffeur.com</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="space-y-4 text-xs font-light text-slate-300">
-                <div class="flex items-start gap-4 p-4 bg-[#0B0F19]/40 border border-white/5 rounded-lg">
-                    <i class="fa-solid fa-location-dot text-indigo-500 text-base mt-0.5"></i>
-                    <div>
-                        <h4 class="font-bold text-white mb-1">Headquarters</h4>
-                        <p>London, United Kingdom</p>
-                    </div>
-                </div>
-
-                <div class="flex items-start gap-4 p-4 bg-[#0B0F19]/40 border border-white/5 rounded-lg">
-                    <i class="fa-solid fa-envelope text-indigo-500 text-base mt-0.5"></i>
-                    <div>
-                        <h4 class="font-bold text-white mb-1">Electronic Support</h4>
-                        <p>info@londonprestigechauffeur.com</p>
-                    </div>
-                </div>
-
-                <div class="flex items-start gap-4 p-4 bg-[#0B0F19]/40 border border-white/5 rounded-lg">
-                    <i class="fa-solid fa-shield-halved text-indigo-500 text-base mt-0.5"></i>
-                    <div>
-                        <h4 class="font-bold text-white mb-1">Discretion Confirmed</h4>
-                        <p>All client accounts remain bound under absolute operational non-disclosure agreements.</p>
-                    </div>
+            <div class="space-y-6">
+                <h3 class="text-xs uppercase font-serif tracking-[0.2em] text-zinc-400 border-b border-zinc-900 pb-2">
+                    Availability Matrix</h3>
+                <div class="space-y-3 text-zinc-400 font-light leading-relaxed">
+                    <p class="flex justify-between border-b border-zinc-950 pb-1">
+                        <span>Corporate Allocations:</span> <span class="text-white font-medium">24 Hours / 7
+                            Days</span>
+                    </p>
+                    <p class="flex justify-between border-b border-zinc-950 pb-1">
+                        <span>Live Flight Audits:</span> <span class="text-white font-medium">Continuous
+                            Real-Time</span>
+                    </p>
+                    <p class="flex justify-between">
+                        <span>Administrative Office:</span> <span class="text-zinc-500">08:00 – 18:00 GMT</span>
+                    </p>
                 </div>
             </div>
+
+            <div class="p-6 bg-[#050506] border border-zinc-900 space-y-2">
+                <h4 class="text-xs uppercase tracking-wider text-white font-medium">NDA & Confidentiality Vows</h4>
+                <p class="text-zinc-500 text-[11px] font-light leading-relaxed">
+                    All formal travel briefs, private itineraries, and diplomatic personnel communications are
+                    automatically routed via highly encrypted storage channels matching international discretion
+                    standards.
+                </p>
+            </div>
+
         </div>
 
-        <!-- Right Side: Dynamic Web3Forms Lead Form -->
-        <div class="lg:col-span-8 bg-[#0B0F19]/20 border border-white/5 p-6 md:p-10 rounded-xl">
-            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+        <!-- Right Column: General Corporate Concierge Form -->
+        <div class="lg:col-span-7 bg-[#050506] border border-zinc-900 p-8 sm:p-10 shadow-2xl">
+            <h3 class="text-sm font-serif text-white tracking-widest uppercase border-b border-zinc-900 pb-3 mb-6">Send
+                Corporate Inquiry</h3>
 
-                <!-- Web3Forms Access Key Token -->
-                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
-                <!-- Optional: Custom Subject Line -->
-                <input type="hidden" name="subject" value="New Premium Chauffeur Booking Request">
-                <!-- Optional: Redirect Page After Success -->
-                <input type="hidden" name="from_name" value="London Prestige Chauffeur Website">
+            <form name="prestige-contact" method="POST" data-netlify="true" class="space-y-6 text-xs tracking-wider">
+                <input type="hidden" name="form-name" value="prestige-contact" />
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">Full
-                            Name *</label>
-                        <input type="text" name="name" required
-                            class="w-full h-11 bg-[#070A12] border border-white/10 rounded px-4 text-xs text-white focus:outline-none focus:border-indigo-500 transition">
+                    <div class="space-y-2">
+                        <label class="text-zinc-400 uppercase text-[10px] font-semibold">Your Name *</label>
+                        <input type="text" name="contact-name" required
+                            class="w-full px-4 py-3 text-white border rounded-none font-light transition">
                     </div>
-                    <div>
-                        <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">Email
-                            Address *</label>
-                        <input type="email" name="email" required
-                            class="w-full h-11 bg-[#070A12] border border-white/10 rounded px-4 text-xs text-white focus:outline-none focus:border-indigo-500 transition">
+                    <div class="space-y-2">
+                        <label class="text-zinc-400 uppercase text-[10px] font-semibold">Business Email *</label>
+                        <input type="email" name="contact-email" required
+                            class="w-full px-4 py-3 text-white border rounded-none font-light transition">
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">Service
-                            Required</label>
-                        <select name="service_type"
-                            class="w-full h-11 bg-[#070A12] border border-white/10 rounded px-4 text-xs text-slate-300 focus:outline-none focus:border-indigo-500 transition">
-                            <option value="Airport Transfer">Airport Transfer Protocol</option>
-                            <option value="Corporate Account">Corporate Travel Arrangement</option>
-                            <option value="Hourly Charter">Hourly / Private Event Hire</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label
-                            class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">Preferred
-                            Vehicle Class</label>
-                        <select name="vehicle_preference"
-                            class="w-full h-11 bg-[#070A12] border border-white/10 rounded px-4 text-xs text-slate-300 focus:outline-none focus:border-indigo-500 transition">
-                            <option value="Mercedes S-Class">Mercedes-Benz S-Class</option>
-                            <option value="Mercedes V-Class">Mercedes-Benz V-Class XL</option>
-                            <option value="Range Rover">Range Rover Autobiography</option>
-                            <option value="Mercedes E-Class">Mercedes-Benz E-Class</option>
-                        </select>
-                    </div>
+                <div class="space-y-2">
+                    <label class="text-zinc-400 uppercase text-[10px] font-semibold">Subject Matter</label>
+                    <input type="text" name="contact-subject"
+                        placeholder="e.g. Corporate Account Setup or Partnership Request"
+                        class="w-full px-4 py-3 text-white border rounded-none font-light transition">
                 </div>
 
-                <div>
-                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">Journey
-                        Details (Dates, Routes, Flight Numbers)</label>
-                    <textarea name="message" rows="5"
-                        placeholder="Please input pick-up locations, drop-off destinations, times, or any custom administrative requests..."
-                        class="w-full bg-[#070A12] border border-white/10 rounded p-4 text-xs text-white focus:outline-none focus:border-indigo-500 transition resize-none"></textarea>
+                <div class="space-y-2">
+                    <label class="text-zinc-400 uppercase text-[10px] font-semibold">Your Briefing Details *</label>
+                    <textarea name="contact-message" rows="5" required
+                        placeholder="Please enter details of your long-term transit requirements or queries..."
+                        class="w-full px-4 py-3 text-white border rounded-none font-light transition resize-none"></textarea>
                 </div>
-
-                <!-- HoneyPot Anti-Spam (Hidden from real users) -->
-                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                 <button type="submit"
-                    class="w-full h-12 bg-white hover:bg-indigo-600 text-black hover:text-white text-xs font-bold uppercase tracking-widest rounded transition duration-300 shadow-lg">
-                    Submit Secure Booking Request
+                    class="w-full bg-white text-black py-4 font-bold uppercase tracking-[0.2em] text-xs hover:bg-zinc-200 transition duration-300 rounded-none cursor-pointer">
+                    Dispatch Secure Message
                 </button>
-
             </form>
         </div>
+
     </section>
 
-    <!-- GLOBAL FOOTER -->
-    <footer class="bg-[#020306] border-t border-white/5 pt-16 pb-8 px-6">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-            <div>
-                <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4">London Prestige</h4>
-                <p class="text-slate-400 text-xs leading-relaxed font-light">The premier custom luxury transport
-                    provider across London and surrounding airports, handling accounts with pristine executive
-                    discretion.</p>
-            </div>
-            <div>
-                <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-xs text-slate-400 font-light">
-                    <li><a href="about-us.html" class="hover:text-indigo-400">About Our Company</a></li>
-                    <li><a href="fleet.html" class="hover:text-indigo-400">Our Chauffeur Fleet</a></li>
-                    <li><a href="services.html" class="hover:text-indigo-400">Premium Services</a></li>
-                    <li><a href="contact-us.html" class="hover:text-indigo-400">Secure Online Booking</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Our Services</h4>
-                <ul class="space-y-2 text-xs text-slate-400 font-light">
-                    <li><a href="services.html" class="hover:text-indigo-400">Airport Transfers</a></li>
-                    <li><a href="services.html" class="hover:text-indigo-400">Corporate Travel</a></li>
-                    <li><a href="services.html" class="hover:text-indigo-400">Private Event Hire</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Contact Us</h4>
-                <p class="text-slate-400 text-xs font-light leading-relaxed">London, United Kingdom<br>Email:
-                    info@londonprestigechauffeur.com<br>Available 24 Hours / 7 Days</p>
-            </div>
-        </div>
-        <div
-            class="max-w-7xl mx-auto border-t border-white/5 pt-6 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500 font-light tracking-wide">
-            <p>&copy; 2026 London Prestige Chauffeur. All rights reserved.</p>
-            <p>Managed by AITS-Official</p>
+    <!-- ================= PRESTIGE CORPORATE RELEVANT FOOTER ================= -->
+    <footer class="bg-black border-t border-zinc-900 pt-16 pb-8 text-xs text-zinc-500">
+        <div class="max-w-7xl mx-auto px-6 text-center space-y-4">
+            <h4 class="text-xs font-serif uppercase tracking-[0.2em] text-white">London Prestige Chauffeur</h4>
+            <p class="text-zinc-500 font-light max-w-md mx-auto leading-relaxed">
+                Maintaining standard global navigation elite logistics across the UK since a quarter century.
+            </p>
+            <div class="w-12 h-px bg-zinc-900 mx-auto pt-2"></div>
+            <p class="text-[11px] text-zinc-600 font-light pt-2">&copy; 2026 London Prestige Chauffeur. All Rights
+                Reserved.</p>
         </div>
     </footer>
 
-    <script>
-        function toggleMobileMenu() {
-            var menu = document.getElementById("mobileMenu");
-            menu.classList.toggle("hidden");
-        }
-    </script>
 </body>
 
 </html>
