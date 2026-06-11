@@ -21,13 +21,47 @@
         .font-sans {
             font-family: 'Montserrat', sans-serif;
         }
+
+        /* Google Translator Custom Hide */
+        .goog-te-banner-frame,
+        .goog-te-balloon-interface {
+            display: none !important;
+        }
+
+        body {
+            top: 0px !important;
+        }
     </style>
 </head>
 
 <body class="bg-black text-white font-sans selection:bg-white selection:text-black">
 
+    <!-- GLOBAL HEADER (NAVIGATION BAR & TRANSLATOR) -->
+    <header class="bg-black border-b border-zinc-900 sticky top-0 z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Logo Architecture -->
+            <a href="index.html" class="flex items-center space-x-3">
+                <span class="font-serif text-lg tracking-widest text-white font-bold">LONDON<span
+                        class="text-zinc-400 font-light">PRESTIGE</span></span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav
+                class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest text-zinc-400 font-medium">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="services.html" class="text-white border-b border-white pb-1">Services</a>
+                <a href="fleet.html" class="hover:text-white transition">Fleet</a>
+                <a href="about-us.html" class="hover:text-white transition">About Us</a>
+                <a href="contact.html" class="hover:text-white transition">Contact</a>
+            </nav>
+
+            <!-- Google Translator Target Widget -->
+            <div id="google_element" class="bg-zinc-900 border border-zinc-800 text-xs px-2 py-1 rounded"></div>
+        </div>
+    </header>
+
     <!-- SERVICES PAGE HERO BANNER -->
-    <section class="relative bg-zinc-950 py-24 text-center border-b border-zinc-900">
+    <section class="relative bg-zinc-950 py-20 text-center border-b border-zinc-900">
         <div class="max-w-4xl mx-auto px-6">
             <p class="text-zinc-500 text-xs tracking-widest uppercase mb-3">Elite Ground Transportation</p>
             <h1 class="font-serif text-4xl md:text-5xl uppercase tracking-widest text-white">Our Chauffeur Services</h1>
@@ -67,7 +101,7 @@
                 </div>
             </div>
 
-            <!-- SERVICE 2: AIRPORT MEET AND GREET (FIXED LUXURY CLIENT IMAGE) -->
+            <!-- SERVICE 2: AIRPORT MEET AND GREET -->
             <div id="airport-meet-greet"
                 class="scroll-mt-24 flex flex-col lg:flex-row-reverse items-center gap-12 border-b border-zinc-900 pb-20">
                 <div class="w-full lg:w-1/2 h-80 overflow-hidden rounded border border-zinc-900">
@@ -94,7 +128,7 @@
                 </div>
             </div>
 
-            <!-- SERVICE 3: PRIVATE TOUR CHAUFFEURS (FIXED HERITAGE VIEW) -->
+            <!-- SERVICE 3: PRIVATE TOUR CHAUFFEURS -->
             <div id="private-tours"
                 class="scroll-mt-24 flex flex-col lg:flex-row items-center gap-12 border-b border-zinc-900 pb-20">
                 <div class="w-full lg:w-1/2 h-80 overflow-hidden rounded border border-zinc-900">
@@ -122,7 +156,7 @@
                 </div>
             </div>
 
-            <!-- SERVICE 4: CORPORATE ROADSHOWS (FIXED PREMIUM FLEET SETUP) -->
+            <!-- SERVICE 4: CORPORATE ROADSHOWS -->
             <div id="corporate-roadshows"
                 class="scroll-mt-24 flex flex-col lg:flex-row-reverse items-center gap-12 border-b border-zinc-900 pb-20">
                 <div class="w-full lg:w-1/2 h-80 overflow-hidden rounded border border-zinc-900">
@@ -151,7 +185,7 @@
                 </div>
             </div>
 
-            <!-- SERVICE 5: WEDDING & SPECIAL EVENTS (FIXED PREMIUM CHURCH IMAGE) -->
+            <!-- SERVICE 5: WEDDING & SPECIAL EVENTS -->
             <div id="wedding-events" class="scroll-mt-24 flex flex-col lg:flex-row items-center gap-12 pb-10">
                 <div class="w-full lg:w-1/2 h-80 overflow-hidden rounded border border-zinc-900">
                     <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&q=80&w=800"
@@ -182,94 +216,145 @@
         </div>
     </section>
 
-    <!-- MASTER GET A QUOTE FORM SYNCHRONIZED FROM HOME SECTION -->
+    <!-- MATCHING REQUEST A QUOTE FORM (FROM IMAGE_3BEC19.PNG) -->
     <section id="quote-form-section" class="bg-zinc-950 py-20 border-t border-zinc-900 text-white scroll-mt-12">
-        <div class="max-w-3xl mx-auto px-6 bg-black border border-zinc-900 p-8 md:p-12 rounded-lg shadow-2xl">
-            <div class="text-center mb-10">
-                <h3 class="font-serif text-2xl md:text-3xl uppercase tracking-wider mb-2">Request A Chauffeur Quote</h3>
-                <p class="text-xs text-zinc-500 uppercase tracking-widest">Get Your Instant Luxury Ground Logistics
-                    Configuration</p>
-                <div class="w-12 h-[1px] bg-zinc-800 mx-auto mt-4"></div>
-            </div>
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-serif text-3xl text-white tracking-wide">Request A Quote</h2>
+            <p class="text-xs text-zinc-500 tracking-widest uppercase mt-2 mb-8">Get An Instant Corporate Luxury
+                Estimate</p>
+            <div class="w-full bg-zinc-950 border border-zinc-900 h-[1px] mb-8"></div>
 
-            <!-- Netlify Form Architecture tracking Home Page functionality -->
-            <form name="services-page-booking" method="POST" data-netlify="true" class="space-y-6">
-                <input type="hidden" name="form-name" value="services-page-booking" />
+            <form name="services-quote" method="POST" data-netlify="true" class="space-y-6">
+                <input type="hidden" name="form-name" value="services-quote" />
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-[11px] uppercase tracking-wider text-zinc-400 mb-2">Full Name *</label>
-                        <input type="text" name="name" required
-                            class="w-full bg-zinc-900 border border-zinc-800 px-4 py-3.5 text-sm text-white focus:outline-none focus:border-white transition rounded-none">
+                        <label class="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Your
+                            Name</label>
+                        <input type="text" name="name" placeholder="John Doe" required
+                            class="w-full bg-black border border-zinc-800 px-4 py-4 text-sm text-white focus:outline-none focus:border-zinc-700 rounded-none">
                     </div>
                     <div>
-                        <label class="block text-[11px] uppercase tracking-wider text-zinc-400 mb-2">Email Address
-                            *</label>
-                        <input type="email" name="email" required
-                            class="w-full bg-zinc-900 border border-zinc-800 px-4 py-3.5 text-sm text-white focus:outline-none focus:border-white transition rounded-none">
+                        <label class="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Email
+                            Address</label>
+                        <input type="email" name="email" placeholder="john@example.com" required
+                            class="w-full bg-black border border-zinc-800 px-4 py-4 text-sm text-white focus:outline-none focus:border-zinc-700 rounded-none">
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-[11px] uppercase tracking-wider text-zinc-400 mb-2">Phone Number
-                            *</label>
-                        <input type="tel" name="phone" required
-                            class="w-full bg-zinc-900 border border-zinc-800 px-4 py-3.5 text-sm text-white focus:outline-none focus:border-white transition rounded-none">
+                        <label class="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Pickup
+                            Postcode</label>
+                        <input type="text" name="pickup_postcode" placeholder="e.g. W1J 9BR" required
+                            class="w-full bg-black border border-zinc-800 px-4 py-4 text-sm text-white focus:outline-none focus:border-zinc-700 rounded-none">
                     </div>
                     <div>
-                        <label class="block text-[11px] uppercase tracking-wider text-zinc-400 mb-2">Select Chauffeur
-                            Service *</label>
-                        <select name="selected_service"
-                            class="w-full bg-zinc-900 border border-zinc-800 px-4 py-3.5 text-sm text-white focus:outline-none focus:border-white transition rounded-none">
-                            <option value="Airport Chauffeurs">Airport Chauffeurs & Drop-offs</option>
-                            <option value="Meet & Greet">Airport Meet and Greet</option>
-                            <option value="Private Tours">Custom Private Heritage Tours</option>
-                            <option value="Corporate Roadshows">Corporate Roadshows & Events</option>
-                            <option value="Wedding Hire">Wedding & Special Ceremonies</option>
+                        <label class="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Vehicle
+                            Required</label>
+                        <select name="vehicle_required"
+                            class="w-full bg-black border border-zinc-800 px-4 py-4 text-sm text-zinc-400 focus:outline-none focus:border-zinc-700 rounded-none">
+                            <option value="" disabled selected>Select Luxury Class</option>
+                            <option value="Mercedes E-Class">Mercedes-Benz E-Class</option>
+                            <option value="Mercedes S-Class">Mercedes-Benz S-Class</option>
+                            <option value="Mercedes V-Class">Mercedes-Benz V-Class</option>
+                            <option value="Mercedes Vito">Mercedes-Benz Vito</option>
+                            <option value="Sprinter 6-Seater">Sprinter JetClass (6-Seater)</option>
+                            <option value="Sprinter 8-Seater">Sprinter Grand VIP (8-Seater)</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-[11px] uppercase tracking-wider text-zinc-400 mb-2">Pickup Date & Time
-                            *</label>
-                        <input type="text" name="datetime" placeholder="e.g. 28th June, 11:30 AM" required
-                            class="w-full bg-zinc-900 border border-zinc-800 px-4 py-3.5 text-sm text-white focus:outline-none focus:border-white transition rounded-none">
+                        <label class="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Pickup
+                            Date</label>
+                        <input type="date" name="pickup_date" required
+                            class="w-full bg-black border border-zinc-800 px-4 py-4 text-sm text-zinc-400 focus:outline-none focus:border-zinc-700 rounded-none">
                     </div>
                     <div>
-                        <label class="block text-[11px] uppercase tracking-wider text-zinc-400 mb-2">Preferred Vehicle
-                            Class *</label>
-                        <select name="preferred_vehicle"
-                            class="w-full bg-zinc-900 border border-zinc-800 px-4 py-3.5 text-sm text-white focus:outline-none focus:border-white transition rounded-none">
-                            <option value="Mercedes S-Class">Mercedes-Benz S-Class (First Class)</option>
-                            <option value="Mercedes E-Class">Mercedes-Benz E-Class (Business Class)</option>
-                            <option value="Mercedes V-Class">Mercedes-Benz V-Class (Luxury MPV)</option>
-                            <option value="Mercedes Vito">Mercedes-Benz Vito (Executive Van)</option>
-                            <option value="Sprinter 6-Seater">Sprinter JetClass Suite (6-Seater)</option>
-                            <option value="Sprinter 8-Seater">Sprinter Grand VIP Lounge (8-Seater)</option>
-                        </select>
+                        <label class="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Pickup
+                            Time</label>
+                        <input type="time" name="pickup_time" required
+                            class="w-full bg-black border border-zinc-800 px-4 py-4 text-sm text-zinc-400 focus:outline-none focus:border-zinc-700 rounded-none">
                     </div>
                 </div>
 
                 <div>
-                    <label class="block text-[11px] uppercase tracking-wider text-zinc-400 mb-2">Journey Details /
-                        Special Requirements *</label>
-                    <textarea name="journey_details" rows="3" required
-                        placeholder="Provide exact pickup addresses, drop-off locations, flight numbers or specific wedding timeline details..."
-                        class="w-full bg-zinc-900 border border-zinc-800 px-4 py-3.5 text-sm text-white focus:outline-none focus:border-white transition rounded-none resize-none"></textarea>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Special Drop
+                        Instructions / Message</label>
+                    <textarea name="message" rows="4" placeholder="Describe any extra luggage or preferences..."
+                        class="w-full bg-black border border-zinc-800 px-4 py-4 text-sm text-white focus:outline-none focus:border-zinc-700 rounded-none resize-none"></textarea>
                 </div>
 
-                <div class="pt-2">
+                <div class="pt-4">
                     <button type="submit"
-                        class="w-full bg-white text-black text-xs font-semibold uppercase tracking-widest py-4.5 hover:bg-zinc-200 transition duration-300 cursor-pointer">Submit
-                        Quote Request &rarr;</button>
+                        class="w-full bg-white text-black text-xs font-bold uppercase tracking-widest py-4 hover:bg-zinc-200 transition duration-300 flex items-center justify-center space-x-2 cursor-pointer">
+                        <span>Request Get A Quote</span>
+                        <span>&rarr;</span>
+                    </button>
                 </div>
             </form>
         </div>
     </section>
 
+    <!-- GLOBAL FOOTER -->
+    <footer class="bg-black border-t border-zinc-900 py-12 text-center text-zinc-600 text-xs tracking-wider uppercase">
+        <div class="max-w-7xl mx-auto px-6 space-y-4">
+            <p class="text-zinc-400 font-serif tracking-widest">LONDON PRESTIGE CHAUFFEUR</p>
+            <p>&copy; 2026 London Prestige Chauffeur. All Corporate Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Google Translator Scripts -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end group">
+
+        <div
+            class="flex flex-col space-y-3 mb-3 opacity-0 translate-y-4 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300">
+
+            <a href="tel:+442038277777"
+                class="flex items-center space-x-3 bg-zinc-900 border border-zinc-800 text-white px-4 py-2.5 shadow-2xl hover:border-zinc-500 transition duration-300">
+                <span class="text-[10px] uppercase tracking-widest font-medium text-zinc-300">Direct Call</span>
+                <div class="w-8 h-8 bg-zinc-800 flex items-center justify-center rounded-none">
+                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                        </path>
+                    </svg>
+                </div>
+            </a>
+
+            <a href="https://wa.me/442038277777?text=Hi%20London%20Prestige%20Chauffeur,%20I%20would%20like%20to%20request%20a%20luxury%20car%20booking%20estimate."
+                target="_blank" rel="noopener noreferrer"
+                class="flex items-center space-x-3 bg-zinc-900 border border-zinc-800 text-white px-4 py-2.5 shadow-2xl hover:border-zinc-500 transition duration-300">
+                <span class="text-[10px] uppercase tracking-widest font-medium text-zinc-300">WhatsApp Chat</span>
+                <div class="w-8 h-8 bg-[#25D366]/10 flex items-center justify-center rounded-none">
+                    <svg class="w-4 h-4 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.456h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                </div>
+            </a>
+
+        </div>
+
+        <button type="button"
+            class="w-14 h-14 bg-white text-black rounded-none flex items-center justify-center shadow-2xl border border-zinc-200 hover:bg-zinc-100 transition-all duration-300 cursor-pointer group-hover:rotate-12">
+            <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                </path>
+            </svg>
+        </button>
+
+    </div>
 </body>
 
 </html>
