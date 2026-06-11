@@ -43,40 +43,93 @@
 
 <body class="bg-[#09090a] text-zinc-100 overflow-x-hidden antialiased">
 
-    <!-- ================= ULTRA-LUXURY GLOBAL HEADER ================= -->
-    <header
-        class="w-full z-50 bg-black/90 backdrop-blur-md border-b border-zinc-900 sticky top-0 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+    <!-- PREMIUM HEADER WITH LOGO ICON & WORKING TRANSLATOR -->
+    <header class="bg-black/95 backdrop-blur-md sticky top-0 z-50 border-b border-zinc-900 text-white py-4 px-6">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+            <!-- Left: Brand Identity (Logo Icon + Name) -->
             <a href="index.html" class="flex items-center gap-3 group">
+                <img src="images/logo.1.jpeg" alt="LPC Icon"
+                    class="h-10 w-auto object-contain brightness-110 group-hover:scale-105 transition duration-300">
                 <div class="flex flex-col">
                     <span
-                        class="text-2xl font-bold tracking-[0.2em] text-white uppercase font-serif transition group-hover:text-zinc-400">London</span>
+                        class="font-serif text-base sm:text-lg tracking-[0.2em] font-bold uppercase leading-none text-white">London
+                        Prestige</span>
                     <span
-                        class="text-[10px] tracking-[0.43em] text-zinc-400 font-medium uppercase -mt-1">Prestige</span>
-                    <span class="text-[8px] tracking-[0.52em] text-zinc-600 uppercase">Chauffeur</span>
+                        class="text-[10px] tracking-[0.35em] uppercase text-zinc-400 font-light mt-0.5">Chauffeur</span>
                 </div>
             </a>
 
-            <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-[0.15em]">
-                <a href="index.html" class="text-zinc-400 hover:text-white transition">Home</a>
-                <a href="about-us.html" class="text-zinc-400 hover:text-white transition">About Us</a>
-                <a href="services.html" class="text-zinc-400 hover:text-white transition flex items-center gap-1">Our
-                    Services <i class="fa-solid fa-chevron-down text-[8px] text-zinc-600"></i></a>
-                <a href="fleet.html" class="text-zinc-400 hover:text-white transition flex items-center gap-1">Our Fleet
-                    <i class="fa-solid fa-chevron-down text-[8px] text-zinc-600"></i></a>
-                <a href="booking.html" class="text-white border-b border-white pb-1 transition tracking-widest">Book
-                    Now</a>
-                <a href="contact.html" class="text-zinc-400 hover:text-white transition">Contact Us</a>
+            <!-- Center: Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-xs font-medium uppercase tracking-widest text-zinc-400">
+                <a href="index.html" class="text-white hover:text-white transition">Home</a>
+                <a href="about-us.html" class="hover:text-white transition">About Us</a>
+                <a href="services.html" class="hover:text-white transition">Our Services</a>
+                <a href="fleet.html" class="hover:text-white transition">Our Fleet</a>
+                <a href="contact.html" class="hover:text-white transition">Contact Us</a>
             </nav>
 
-            <div class="hidden lg:flex items-center gap-6">
+            <!-- Right: Actions (Phone + Google Translate Dropdown) -->
+            <div class="flex items-center gap-4">
                 <a href="tel:+442038277777"
-                    class="border border-zinc-800 bg-zinc-950 px-5 py-2.5 rounded-none text-xs font-bold tracking-widest text-white hover:border-white transition flex items-center gap-2">
-                    <i class="fa-solid fa-phone text-zinc-400"></i> +44 203 827 7777
+                    class="hidden sm:flex items-center gap-2 border border-zinc-800 bg-zinc-900/50 px-4 py-2 text-xs tracking-wider uppercase hover:bg-white hover:text-black transition duration-300">
+                    <i class="fa-solid fa-phone text-[10px]"></i> +44 203 827 7777
                 </a>
+
+                <!-- Functional Google Translate Widget Wrapper -->
+                <div
+                    class="relative flex items-center bg-zinc-900 border border-zinc-800 px-2 py-1.5 rounded text-white text-xs">
+                    <i class="fa-solid fa-globe text-zinc-400 mr-1.5 text-xs"></i>
+                    <div id="google_element"></div>
+                </div>
             </div>
+
         </div>
     </header>
+
+    <!-- Google Translate Real-Time Execution Script (Paste this right before the closing </body> tag in all files) -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Custom Styling to make Google Translate look sleek & match the premium dark theme -->
+    <style>
+        .goog-te-gadget-simple {
+            background-color: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+            font-family: inherit !important;
+        }
+
+        .goog-te-gadget-simple .goog-te-menu-value span {
+            color: #ffffff !important;
+            font-size: 11px !important;
+            text-transform: uppercase !important;
+            font-weight: 500 !important;
+            letter-spacing: 0.05em !important;
+        }
+
+        .goog-te-gadget-icon,
+        .goog-te-menu-value img {
+            display: none !important;
+        }
+
+        .goog-te-banner-frame {
+            display: none !important;
+        }
+
+        body {
+            top: 0px !important;
+        }
+    </style>
 
     <!-- ================= BOOKING CAPTION BRIEF ================= -->
     <section class="py-16 text-center max-w-2xl mx-auto px-6 space-y-4">
