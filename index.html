@@ -15,6 +15,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -282,11 +283,14 @@
                 class="inline-block text-[11px] uppercase tracking-widest text-white border-b border-zinc-800 pb-1 hover:border-white transition">Explore
                 Service &rarr;</a>
         </div>
-        <!-- REFINED LUXURY SERVICES SECTION (ALL 9 CORE SERVICES) -->
-        <section id="services-section" class="bg-black text-white py-24 border-b border-zinc-900">
+        <!-- ========================================== -->
+        <!-- ANIMATED LUXURY SERVICES GRID WITH NEW PICS-->
+        <!-- ========================================== -->
+        <section id="services-section" class="bg-black text-white py-24 border-b border-zinc-900 overflow-hidden">
             <div class="max-w-7xl mx-auto px-6">
 
-                <div class="text-center mb-16 space-y-3">
+                <!-- Section Header Labeling -->
+                <div class="text-center mb-16 space-y-3" data-aos="fade-up">
                     <p class="text-zinc-500 text-[10px] tracking-[0.3em] uppercase font-semibold">Bespoke Chauffeur
                         Solutions</p>
                     <h2 class="font-serif text-3xl md:text-4xl uppercase tracking-[0.2em] text-white">Our Premium
@@ -294,13 +298,14 @@
                     <div class="w-12 h-[1px] bg-zinc-800 mx-auto mt-4"></div>
                 </div>
 
+                <!-- 3x3 Luxury Service Architecture Grid Layout -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                    <div
-                        class="bg-zinc-950 border border-zinc-900 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition duration-300">
+                    <!-- Card 1: Airport Chauffeurs -->
+                    <div class="bg-zinc-950 border border-zinc-900 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition duration-300"
+                        data-aos="fade-up" data-aos-delay="100">
                         <div class="relative overflow-hidden aspect-[4/3] bg-zinc-900">
-                            <img src="images/minibus-airport-chauffeur.webp"
-                                alt="Airport Chauffeurs Private Terminal Transfer"
+                            <img src="images/airport.jpg" alt="Airport Chauffeurs"
                                 class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-105 group-hover:grayscale-0 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent">
                             </div>
@@ -322,11 +327,11 @@
                         </div>
                     </div>
 
-                    <div
-                        class="bg-zinc-950 border border-zinc-900 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition duration-300">
+                    <!-- Card 2: Airport Meet and Greet -->
+                    <div class="bg-zinc-950 border border-zinc-900 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition duration-300"
+                        data-aos="fade-up" data-aos-delay="200">
                         <div class="relative overflow-hidden aspect-[4/3] bg-zinc-900">
-                            <img src="images/Mercedes-s-Class-2.webp"
-                                alt="Professional Uniformed Chauffeur Welcome Service"
+                            <img src="images/airport meet and greet.jpg" alt="Airport Meet and Greet"
                                 class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-105 group-hover:grayscale-0 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent">
                             </div>
@@ -348,11 +353,11 @@
                         </div>
                     </div>
 
-                    <div
-                        class="bg-zinc-950 border border-zinc-900 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition duration-300">
+                    <!-- Card 3: Cruise Docks Chauffeurs -->
+                    <div class="bg-zinc-950 border border-zinc-900 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition duration-300"
+                        data-aos="fade-up" data-aos-delay="300">
                         <div class="relative overflow-hidden aspect-[4/3] bg-zinc-900">
-                            <img src="images/Mercedes-Sprinter-8-Seater.webp"
-                                alt="Luxury Cruise Docks Logistics Group Transport"
+                            <img src="images/cruise dock.jpg" alt="Cruise Docks Chauffeurs"
                                 class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-105 group-hover:grayscale-0 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent">
                             </div>
@@ -374,23 +379,24 @@
                         </div>
                     </div>
 
-                    <div
-                        class="bg-zinc-950 border border-zinc-900 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition duration-300">
+                    <!-- Card 4: Corporate Chauffeur -->
+                    <div class="bg-zinc-950 border border-zinc-900 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition duration-300"
+                        data-aos="fade-up" data-aos-delay="100">
                         <div class="relative overflow-hidden aspect-[4/3] bg-zinc-900">
-                            <img src="images/Mercedes-E-Class-1.webp" alt="Cross-Border Long Distance Luxury Sedan"
+                            <img src="images/corporate chauffeur.jpg" alt="Corporate Chauffeur"
                                 class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-105 group-hover:grayscale-0 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent">
                             </div>
                         </div>
                         <div class="p-6 md:p-8 space-y-3 flex-grow">
-                            <h3 class="font-serif text-lg tracking-wider text-white font-semibold">European Trips
-                                Chauffeurs</h3>
+                            <h3 class="font-serif text-lg tracking-wider text-white font-semibold">Corporate Chauffeur
+                            </h3>
                             <p class="text-zinc-500 text-[13px] font-light leading-relaxed normal-case">
-                                Cross-border executive travel networks across continental Europe, delivering
-                                unprecedented safety, comfort, and luxury logistics.
+                                Flawless coordination for executive travel, corporate events, and business roadshows
+                                with complete confidentiality.
                             </p>
                             <div class="pt-2">
-                                <a href="services.html#european-trips"
+                                <a href="services.html#corporate-chauffeur"
                                     class="inline-flex items-center space-x-1.5 text-[10px] tracking-[0.2em] uppercase font-bold text-zinc-400 group-hover:text-white transition duration-300">
                                     <span>Explore Service</span>
                                     <span class="transform group-hover:translate-x-1 transition duration-300">→</span>
@@ -399,11 +405,11 @@
                         </div>
                     </div>
 
-                    <div
-                        class="bg-zinc-950 border border-zinc-900 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition duration-300">
+                    <!-- Card 5: Private Tour Chauffeurs -->
+                    <div class="bg-zinc-950 border border-zinc-900 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition duration-300"
+                        data-aos="fade-up" data-aos-delay="200">
                         <div class="relative overflow-hidden aspect-[4/3] bg-zinc-900">
-                            <img src="images/Mercedes-V-Class-2.webp"
-                                alt="Bespoke London Sightseeing Private Chauffeur Tour"
+                            <img src="images/private tour.jpg" alt="Private Tour Chauffeurs"
                                 class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-105 group-hover:grayscale-0 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent">
                             </div>
@@ -425,10 +431,11 @@
                         </div>
                     </div>
 
-                    <div
-                        class="bg-zinc-950 border border-zinc-900 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition duration-300">
+                    <!-- Card 6: Business Class Transport -->
+                    <div class="bg-zinc-950 border border-zinc-900 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition duration-300"
+                        data-aos="fade-up" data-aos-delay="300">
                         <div class="relative overflow-hidden aspect-[4/3] bg-zinc-900">
-                            <img src="images/Mercedes-Vito-1.webp" alt="Corporate Business Transport Fleet Solution"
+                            <img src="images/business class transport.jpg" alt="Business Class Transport"
                                 class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-105 group-hover:grayscale-0 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent">
                             </div>
@@ -441,7 +448,7 @@
                                 inter-city executive transit solutions.
                             </p>
                             <div class="pt-2">
-                                <a href="services.html#business-transport"
+                                <a href="services.html#business-class"
                                     class="inline-flex items-center space-x-1.5 text-[10px] tracking-[0.2em] uppercase font-bold text-zinc-400 group-hover:text-white transition duration-300">
                                     <span>Explore Service</span>
                                     <span class="transform group-hover:translate-x-1 transition duration-300">→</span>
@@ -450,10 +457,11 @@
                         </div>
                     </div>
 
-                    <div
-                        class="bg-zinc-950 border border-zinc-900 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition duration-300">
+                    <!-- Card 7: First Class Prestige -->
+                    <div class="bg-zinc-950 border border-zinc-900 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition duration-300"
+                        data-aos="fade-up" data-aos-delay="100">
                         <div class="relative overflow-hidden aspect-[4/3] bg-zinc-900">
-                            <img src="images/Mercedes-s-Class-2.webp" alt="Ultra VIP Diplomatic Chauffeur Fleet Asset"
+                            <img src="images/first class.jpg" alt="First Class Prestige"
                                 class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-105 group-hover:grayscale-0 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent">
                             </div>
@@ -475,24 +483,24 @@
                         </div>
                     </div>
 
-                    <div
-                        class="bg-zinc-950 border border-zinc-900 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition duration-300">
+                    <!-- Card 8: Wedding Chauffeur -->
+                    <div class="bg-zinc-950 border border-zinc-900 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition duration-300"
+                        data-aos="fade-up" data-aos-delay="200">
                         <div class="relative overflow-hidden aspect-[4/3] bg-zinc-900">
-                            <img src="images/Mercedes-Sprinter-6-Seater.webp"
-                                alt="Executive Corporate Mobile Office Van"
+                            <img src="images/wedding chauffeur.jpg" alt="Wedding Chauffeur"
                                 class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-105 group-hover:grayscale-0 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent">
                             </div>
                         </div>
                         <div class="p-6 md:p-8 space-y-3 flex-grow">
-                            <h3 class="font-serif text-lg tracking-wider text-white font-semibold">Corporate Roadshows
+                            <h3 class="font-serif text-lg tracking-wider text-white font-semibold">Wedding Chauffeur
                             </h3>
                             <p class="text-zinc-500 text-[13px] font-light leading-relaxed normal-case">
-                                Flawless multi-stop group business transit infrastructure utilizing high-end mobile
-                                offices for executive management team setups.
+                                Impeccable coordination and dedicated luxury vehicles to ensure your bridal party
+                                arrives in complete elegance and style.
                             </p>
                             <div class="pt-2">
-                                <a href="services.html#roadshows"
+                                <a href="services.html#wedding-chauffeur"
                                     class="inline-flex items-center space-x-1.5 text-[10px] tracking-[0.2em] uppercase font-bold text-zinc-400 group-hover:text-white transition duration-300">
                                     <span>Explore Service</span>
                                     <span class="transform group-hover:translate-x-1 transition duration-300">→</span>
@@ -501,23 +509,24 @@
                         </div>
                     </div>
 
-                    <div
-                        class="bg-zinc-950 border border-zinc-900 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition duration-300">
+                    <!-- Card 9: Wedding & Private Events -->
+                    <div class="bg-zinc-950 border border-zinc-900 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition duration-300"
+                        data-aos="fade-up" data-aos-delay="300">
                         <div class="relative overflow-hidden aspect-[4/3] bg-zinc-900">
-                            <img src="images/minibus-3.webp" alt="Luxury Wedding Vehicle Fleet Escort"
+                            <img src="images/wedding and private events.jpg" alt="Wedding & Private Events"
                                 class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-105 group-hover:grayscale-0 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent">
                             </div>
                         </div>
                         <div class="p-6 md:p-8 space-y-3 flex-grow">
-                            <h3 class="font-serif text-lg tracking-wider text-white font-semibold">Wedding & Special
+                            <h3 class="font-serif text-lg tracking-wider text-white font-semibold">Wedding & Private
                                 Events</h3>
                             <p class="text-zinc-500 text-[13px] font-light leading-relaxed normal-case">
-                                Impeccable coordination and dedicated luxury fleets mapping to major high-end weddings,
-                                galas, and luxury red-carpet ceremonies.
+                                Add absolute poise and grandeur to your milestone celebrations, premium red-carpet
+                                events, or luxury gala dinners.
                             </p>
                             <div class="pt-2">
-                                <a href="services.html#events"
+                                <a href="services.html#wedding-events"
                                     class="inline-flex items-center space-x-1.5 text-[10px] tracking-[0.2em] uppercase font-bold text-zinc-400 group-hover:text-white transition duration-300">
                                     <span>Explore Service</span>
                                     <span class="transform group-hover:translate-x-1 transition duration-300">→</span>
@@ -837,6 +846,14 @@
             </button>
 
         </div>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 800, // Animation ki speed (800ms perfect aur smooth hai)
+                once: true,    // Sirf aik dafa animate hoga jab user scroll karke aayega
+                offset: 100    // Jab element screen se 100px upar aayega tab animation shuru hogi
+            });
+        </script>
 </body>
 
 </html>
