@@ -36,186 +36,381 @@
 
 <body class="bg-black text-white font-sans selection:bg-white selection:text-black">
 
-    <!-- GLOBAL HEADER (NAVIGATION BAR & TRANSLATOR) -->
-    <header class="bg-black border-b border-zinc-900 sticky top-0 z-50 px-6 py-4">
+    <!-- PREMIUM HEADER WITH LOGO ICON & WORKING TRANSLATOR -->
+    <header class="bg-black/95 backdrop-blur-md sticky top-0 z-50 border-b border-zinc-900 text-white py-4 px-6">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <!-- Logo Architecture -->
-            <a href="index.html" class="flex items-center space-x-3">
-                <span class="font-serif text-lg tracking-widest text-white font-bold">LONDON<span
-                        class="text-zinc-400 font-light">PRESTIGE</span></span>
+
+            <!-- Left: Brand Identity (Logo Icon + Name) -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="images/logo.1.jpeg" alt="LPC Icon"
+                    class="h-10 w-auto object-contain brightness-110 group-hover:scale-105 transition duration-300">
+                <div class="flex flex-col">
+                    <span
+                        class="font-serif text-base sm:text-lg tracking-[0.2em] font-bold uppercase leading-none text-white">London
+                        Prestige</span>
+                    <span
+                        class="text-[10px] tracking-[0.35em] uppercase text-zinc-400 font-light mt-0.5">Chauffeur</span>
+                </div>
             </a>
 
-            <!-- Navigation Links -->
-            <nav
-                class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest text-zinc-400 font-medium">
-                <a href="index.html" class="hover:text-white transition">Home</a>
-                <a href="services.html" class="text-white border-b border-white pb-1">Services</a>
-                <a href="fleet.html" class="hover:text-white transition">Fleet</a>
+            <!-- Center: Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-xs font-medium uppercase tracking-widest text-zinc-400">
+                <a href="index.html" class="text-white hover:text-white transition">Home</a>
                 <a href="about-us.html" class="hover:text-white transition">About Us</a>
-                <a href="contact.html" class="hover:text-white transition">Contact</a>
+                <a href="services.html" class="hover:text-white transition">Our Services</a>
+                <a href="fleet.html" class="hover:text-white transition">Our Fleet</a>
+                <a href="contact.html" class="hover:text-white transition">Contact Us</a>
             </nav>
 
-            <!-- Google Translator Target Widget -->
-            <div id="google_element" class="bg-zinc-900 border border-zinc-800 text-xs px-2 py-1 rounded"></div>
+            <!-- Right: Actions (Phone + Google Translate Dropdown) -->
+            <div class="flex items-center gap-4">
+                <a href="tel:+442038277777"
+                    class="hidden sm:flex items-center gap-2 border border-zinc-800 bg-zinc-900/50 px-4 py-2 text-xs tracking-wider uppercase hover:bg-white hover:text-black transition duration-300">
+                    <i class="fa-solid fa-phone text-[10px]"></i> +44 203 827 7777
+                </a>
+
+                <!-- Functional Google Translate Widget Wrapper -->
+                <div
+                    class="relative flex items-center bg-zinc-900 border border-zinc-800 px-2 py-1.5 rounded text-white text-xs">
+                    <i class="fa-solid fa-globe text-zinc-400 mr-1.5 text-xs"></i>
+                    <div id="google_element"></div>
+                </div>
+            </div>
+
         </div>
     </header>
 
-    <!-- SERVICES PAGE HERO BANNER -->
-    <section class="relative bg-zinc-950 py-20 text-center border-b border-zinc-900">
-        <div class="max-w-4xl mx-auto px-6">
-            <p class="text-zinc-500 text-xs tracking-widest uppercase mb-3">Elite Ground Transportation</p>
-            <h1 class="font-serif text-4xl md:text-5xl uppercase tracking-widest text-white">Our Chauffeur Services</h1>
-            <div class="w-16 h-[1px] bg-zinc-700 mx-auto mt-6"></div>
+    <!-- Google Translate Real-Time Execution Script (Paste this right before the closing </body> tag in all files) -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Custom Styling to make Google Translate look sleek & match the premium dark theme -->
+    <style>
+        .goog-te-gadget-simple {
+            background-color: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+            font-family: inherit !important;
+        }
+
+        .goog-te-gadget-simple .goog-te-menu-value span {
+            color: #ffffff !important;
+            font-size: 11px !important;
+            text-transform: uppercase !important;
+            font-weight: 500 !important;
+            letter-spacing: 0.05em !important;
+        }
+
+        .goog-te-gadget-icon,
+        .goog-te-menu-value img {
+            display: none !important;
+        }
+
+        .goog-te-banner-frame {
+            display: none !important;
+        }
+
+        body {
+            top: 0px !important;
+        }
+    </style>
+
+    <!-- ========================================== -->
+    <!-- MAIN HERO COVER & TITLE ARCHITECTURE       -->
+    <!-- ========================================== -->
+    <section class="relative bg-black pt-32 pb-20 border-b border-zinc-900 overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <img src="images/Mercedes-s-Class-2.webp" alt="London Prestige Corporate Chauffeur Core Backdrop"
+                class="w-full h-full object-cover filter grayscale blur-sm">
+        </div>
+        <div class="relative max-w-7xl mx-auto px-6 text-center space-y-4">
+            <p class="text-zinc-500 text-[10px] tracking-[0.35em] uppercase font-bold">World-Class Logistics Portfolio
+            </p>
+            <h1 class="font-serif text-3xl md:text-5xl uppercase tracking-[0.2em] text-white font-light">Our Bespoke
+                Services</h1>
+            <div class="w-16 h-[1px] bg-zinc-800 mx-auto mt-6"></div>
+            <p class="max-w-xl mx-auto text-zinc-500 font-light text-[13px] leading-relaxed normal-case">
+                Explore our comprehensive suite of premier chauffeur models engineered meticulously for diplomatic
+                loops, executive operations, and luxury tour infrastructure across the United Kingdom.
+            </p>
         </div>
     </section>
 
-    <!-- DETAILED LUXURY SERVICES SECTION WITH SPECIFICATIONS -->
-    <section class="bg-black py-20">
-        <div class="max-w-6xl mx-auto px-6 space-y-32">
 
-            <!-- SERVICE 1: AIRPORT CHAUFFEURS -->
+    <!-- ========================================== -->
+    <!-- HIGH-END SERVICE DETAIL BLOCKS             -->
+    <!-- ========================================== -->
+    <section class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 space-y-24">
+
+            <!-- Service 1: Airport Chauffeurs -->
             <div id="airport-chauffeurs"
-                class="scroll-mt-24 flex flex-col lg:flex-row items-center gap-12 border-b border-zinc-900 pb-20">
-                <div class="w-full lg:w-1/2 h-80 overflow-hidden rounded border border-zinc-900">
-                    <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=800"
-                        alt="Luxury Airport Chauffeur" class="w-full h-full object-cover">
+                class="scroll-mt-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-12 border-t border-zinc-950">
+                <div
+                    class="lg:col-span-5 relative aspect-[4/3] bg-zinc-900 border border-zinc-900 overflow-hidden group">
+                    <img src="images/minibus-airport-chauffeur.webp" alt="Premium Airport Ground Transfer Model"
+                        class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-102 group-hover:grayscale-0 transition duration-500">
                 </div>
-                <div class="w-full lg:w-1/2 space-y-4">
-                    <span class="text-zinc-500 text-[10px] tracking-widest uppercase">First-Class Terminal
-                        Transfers</span>
-                    <h2 class="font-serif text-3xl tracking-wide">Airport Chauffeurs</h2>
-                    <p class="text-zinc-400 text-sm font-light leading-relaxed">Seamless luxury transfers across all
-                        major London terminals (Heathrow, Gatwick, Luton, Stansted, and London City). Skip the stress of
-                        traffic with our real-time flight tracking system and dedicated professional chauffeurs.</p>
-                    <div class="bg-zinc-950 p-4 border border-zinc-900 space-y-2">
-                        <p class="text-xs text-white uppercase tracking-wider font-semibold">Recommended Fleet Specs for
-                            Airports:</p>
-                        <p class="text-zinc-400 text-xs font-light">• <strong class="text-white">Mercedes
-                                S-Class:</strong> 3 Passengers / 3 Medium Bags (VVIP Transfers)</p>
-                        <p class="text-zinc-400 text-xs font-light">• <strong class="text-white">Mercedes V-Class /
-                                Vito:</strong> 7-8 Passengers / 7-8 Heavy Luggage Bags (Groups & Families)</p>
-                    </div>
-                    <a href="#quote-form-section"
-                        class="inline-block text-xs uppercase tracking-widest text-white border-b border-white pb-1 mt-2">Book
-                        Airport Transfer &rarr;</a>
-                </div>
-            </div>
-
-            <!-- SERVICE 2: AIRPORT MEET AND GREET -->
-            <div id="airport-meet-greet"
-                class="scroll-mt-24 flex flex-col lg:flex-row-reverse items-center gap-12 border-b border-zinc-900 pb-20">
-                <div class="w-full lg:w-1/2 h-80 overflow-hidden rounded border border-zinc-900">
-                    <img src="https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&q=80&w=800"
-                        alt="Luxury Client at Airport Waiting for Car" class="w-full h-full object-cover">
-                </div>
-                <div class="w-full lg:w-1/2 space-y-4">
-                    <span class="text-zinc-500 text-[10px] tracking-widest uppercase">VIP Terminal Welcome
-                        Infrastructure</span>
-                    <h2 class="font-serif text-3xl tracking-wide">Airport Meet and Greet</h2>
-                    <p class="text-zinc-400 text-sm font-light leading-relaxed">A completely synchronized executive
-                        welcome. Your assigned chauffeur will wait inside the arrivals hall with a custom digital
-                        nameboard, handle your heavy luggage, and escort you smoothly through the terminal straight to
-                        your pre-cooled prestige vehicle.</p>
-                    <div class="bg-zinc-950 p-4 border border-zinc-900 space-y-2">
-                        <p class="text-xs text-white uppercase tracking-wider font-semibold">Service Vehicle Capability:
-                        </p>
-                        <p class="text-zinc-400 text-xs font-light">• Applicable across our entire fleet from premium
-                            executive sedans to custom luxury Sprinters depending on your party size.</p>
-                    </div>
-                    <a href="#quote-form-section"
-                        class="inline-block text-xs uppercase tracking-widest text-white border-b border-white pb-1 mt-2">Book
-                        Meet & Greet &rarr;</a>
-                </div>
-            </div>
-
-            <!-- SERVICE 3: PRIVATE TOUR CHAUFFEURS -->
-            <div id="private-tours"
-                class="scroll-mt-24 flex flex-col lg:flex-row items-center gap-12 border-b border-zinc-900 pb-20">
-                <div class="w-full lg:w-1/2 h-80 overflow-hidden rounded border border-zinc-900">
-                    <img src="https://images.unsplash.com/photo-1513635269975-59663e0ca1ad?auto=format&fit=crop&q=80&w=800"
-                        alt="London Private Tour Heritage" class="w-full h-full object-cover">
-                </div>
-                <div class="w-full lg:w-1/2 space-y-4">
-                    <span class="text-zinc-500 text-[10px] tracking-widest uppercase">Custom Sightseeing Sight
-                        Experiences</span>
-                    <h2 class="font-serif text-3xl tracking-wide">Private Tour Chauffeurs</h2>
-                    <p class="text-zinc-400 text-sm font-light leading-relaxed">Explore the iconic heritage of London,
-                        Windsor Castle, Stonehenge, or the Cotswolds in absolute luxury. Our knowledgeable chauffeurs
-                        provide highly tailored private sightseeing itineraries with flexible day-hire frameworks.</p>
-                    <div class="bg-zinc-950 p-4 border border-zinc-900 space-y-2">
-                        <p class="text-xs text-white uppercase tracking-wider font-semibold">Recommended Fleet Specs for
-                            Tours:</p>
-                        <p class="text-zinc-400 text-xs font-light">• <strong class="text-white">Mercedes E/S
-                                Class:</strong> Up to 3 Passengers (Couples & Executives)</p>
-                        <p class="text-zinc-400 text-xs font-light">• <strong class="text-white">Sprinter JetClass
-                                (6-Seater):</strong> 6 Passengers / Smart TV / Built-in Refreshment Bar</p>
-                    </div>
-                    <a href="#quote-form-section"
-                        class="inline-block text-xs uppercase tracking-widest text-white border-b border-white pb-1 mt-2">Book
-                        Private Tour &rarr;</a>
-                </div>
-            </div>
-
-            <!-- SERVICE 4: CORPORATE ROADSHOWS -->
-            <div id="corporate-roadshows"
-                class="scroll-mt-24 flex flex-col lg:flex-row-reverse items-center gap-12 border-b border-zinc-900 pb-20">
-                <div class="w-full lg:w-1/2 h-80 overflow-hidden rounded border border-zinc-900">
-                    <img src="https://images.unsplash.com/photo-1549638441-b786d4fa6b45?auto=format&fit=crop&q=80&w=800"
-                        alt="Executive Corporate Chauffeur Roadshow" class="w-full h-full object-cover">
-                </div>
-                <div class="w-full lg:w-1/2 space-y-4">
-                    <span class="text-zinc-500 text-[10px] tracking-widest uppercase">Multi-Stop Enterprise Transit
-                        Networks</span>
-                    <h2 class="font-serif text-3xl tracking-wide">Corporate Roadshows</h2>
-                    <p class="text-zinc-400 text-sm font-light leading-relaxed">Flawless ground logistics designed for
-                        rigorous executive itineraries, investor meetings, and corporate roadshows. Turn your travel
-                        time into productive business hours with our vehicles acting as private, secure mobile offices.
+                <div class="lg:col-span-7 space-y-5">
+                    <span class="text-[10px] tracking-widest text-zinc-600 uppercase font-bold">Terminal Port 01</span>
+                    <h2 class="font-serif text-2xl uppercase tracking-wider text-white">Airport Chauffeurs</h2>
+                    <p class="text-zinc-500 text-[13px] font-light leading-relaxed normal-case">
+                        We engineer flawless flight-synchronized terminal transfers across Heathrow (Terminals 2-5),
+                        Gatwick, Stansted, and Luton. Avoid the stress of London traffic with real-time flight telemetry
+                        monitoring that ensures your vehicle is staged exactly when you step off the aircraft.
                     </p>
-                    <div class="bg-zinc-950 p-4 border border-zinc-900 space-y-2">
-                        <p class="text-xs text-white uppercase tracking-wider font-semibold">Recommended Fleet Specs for
-                            Roadshows:</p>
-                        <p class="text-zinc-400 text-xs font-light">• <strong class="text-white">Mercedes
-                                V-Class:</strong> 7 Passengers / Conference Seating / Folding Tables</p>
-                        <p class="text-zinc-400 text-xs font-light">• <strong class="text-white">Sprinter Grand VIP
-                                (8-Seater):</strong> 8 Passengers / Complete Privacy Partition / Premium Lounge</p>
-                    </div>
-                    <a href="#quote-form-section"
-                        class="inline-block text-xs uppercase tracking-widest text-white border-b border-white pb-1 mt-2">Book
-                        Corporate Roadshow &rarr;</a>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-zinc-400 text-xs tracking-wide font-light">
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Real-Time Flight Telemetry</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>60 Mins Complimentary Staging</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- SERVICE 5: WEDDING & SPECIAL EVENTS -->
-            <div id="wedding-events" class="scroll-mt-24 flex flex-col lg:flex-row items-center gap-12 pb-10">
-                <div class="w-full lg:w-1/2 h-80 overflow-hidden rounded border border-zinc-900">
-                    <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&q=80&w=800"
-                        alt="Luxury Wedding Car in front of Church" class="w-full h-full object-cover">
+            <!-- Service 2: Airport Meet and Greet -->
+            <div id="meet-greet"
+                class="scroll-mt-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-12 border-t border-zinc-900">
+                <div class="lg:col-span-7 space-y-5 order-2 lg:order-1">
+                    <span class="text-[10px] tracking-widest text-zinc-600 uppercase font-bold">Terminal Arrival
+                        02</span>
+                    <h2 class="font-serif text-2xl uppercase tracking-wider text-white">Airport Meet and Greet</h2>
+                    <p class="text-zinc-500 text-[13px] font-light leading-relaxed normal-case">
+                        Experience true VIP hospitality from the moment you pass baggage control. Our uniformed
+                        chauffeur welcomes you at the arrivals hall with custom digital signaling, takes full management
+                        of your luggage arrays, and safely escorts you through the terminal crowds straight to the
+                        air-conditioned cabin.
+                    </p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-zinc-400 text-xs tracking-wide font-light">
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Paging Board Presentation</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Full Luggage Porter Porterage</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="w-full lg:w-1/2 space-y-4">
-                    <span class="text-zinc-500 text-[10px] tracking-widest uppercase">Impeccable Flagship Ceremonial
-                        Coordination</span>
-                    <h2 class="font-serif text-3xl tracking-wide">Wedding & Special Events</h2>
-                    <p class="text-zinc-400 text-sm font-light leading-relaxed">Add a touch of premium luxury to your
-                        special day. Our beautifully presented flagship fleets sit outside classic locations and
-                        churches with professional, suited chauffeurs delivering red-carpet coordination for brides,
-                        grooms, and VVIP gala guests.</p>
-                    <div class="bg-zinc-950 p-4 border border-zinc-900 space-y-2">
-                        <p class="text-xs text-white uppercase tracking-wider font-semibold">Recommended Fleet Specs for
-                            Weddings:</p>
-                        <p class="text-zinc-400 text-xs font-light">• <strong class="text-white">Mercedes
-                                S-Class:</strong> 3 Passengers / Reclining Heated Seats (Perfect for Bride & Groom)</p>
-                        <p class="text-zinc-400 text-xs font-light">• <strong class="text-white">Mercedes V-Class /
-                                Vans:</strong> Luxury Group Shuttles for Wedding Guests</p>
-                    </div>
-                    <a href="#quote-form-section"
-                        class="inline-block text-xs uppercase tracking-widest text-white border-b border-white pb-1 mt-2">Book
-                        Special Event &rarr;</a>
+                <div
+                    class="lg:col-span-5 relative aspect-[4/3] bg-zinc-900 border border-zinc-900 overflow-hidden group order-1 lg:order-2">
+                    <img src="images/Mercedes-s-Class-2.webp" alt="Uniformed Handover Meet Greet Service"
+                        class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-102 group-hover:grayscale-0 transition duration-500">
+                </div>
+            </div>
+
+            <!-- Service 3: Cruise Docks Chauffeurs -->
+            <div id="cruise-docks"
+                class="scroll-mt-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-12 border-t border-zinc-900">
+                <div
+                    class="lg:col-span-5 relative aspect-[4/3] bg-zinc-900 border border-zinc-900 overflow-hidden group">
+                    <img src="images/Mercedes-Sprinter-8-Seater.webp" alt="Maritime Cruise Dock Transfers"
+                        class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-102 group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="lg:col-span-7 space-y-5">
+                    <span class="text-[10px] tracking-widest text-zinc-600 uppercase font-bold">Maritime Port 03</span>
+                    <h2 class="font-serif text-2xl uppercase tracking-wider text-white">Cruise Docks Chauffeurs</h2>
+                    <p class="text-zinc-500 text-[13px] font-light leading-relaxed normal-case">
+                        Bespoke high-capacity transfers catering to major UK ports including Southampton, Dover,
+                        Portsmouth, and Tilbury Docks. Designed specifically to handle long-distance seaport journeys
+                        with heavy maritime luggage configurations utilizing luxury Mercedes V-Class and Sprinter
+                        fleets.
+                    </p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-zinc-400 text-xs tracking-wide font-light">
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Extended Luggage Capacity</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Door-to-Deck Port Access</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 4: European Trips Chauffeurs -->
+            <div id="european-trips"
+                class="scroll-mt-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-12 border-t border-zinc-900">
+                <div class="lg:col-span-7 space-y-5 order-2 lg:order-1">
+                    <span class="text-[10px] tracking-widest text-zinc-600 uppercase font-bold">Continental Loop
+                        04</span>
+                    <h2 class="font-serif text-2xl uppercase tracking-wider text-white">European Trips Chauffeurs</h2>
+                    <p class="text-zinc-500 text-[13px] font-light leading-relaxed normal-case">
+                        Cross-channel luxury transport networks linking London seamlessly with major continental hubs
+                        like Paris, Brussels, and Amsterdam. Enjoy complete exclusivity with private Eurotunnel crossing
+                        arrangements while avoiding commercial flights or train schedules completely.
+                    </p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-zinc-400 text-xs tracking-wide font-light">
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Cross-Channel Eurotunnel Routing</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Multi-Day Continental Hires</span>
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="lg:col-span-5 relative aspect-[4/3] bg-zinc-900 border border-zinc-900 overflow-hidden group order-1 lg:order-2">
+                    <img src="images/Mercedes-E-Class-1.webp" alt="Long Distance Cross Border Layout"
+                        class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-102 group-hover:grayscale-0 transition duration-500">
+                </div>
+            </div>
+
+            <!-- Service 5: Private Tour Chauffeurs -->
+            <div id="private-tours"
+                class="scroll-mt-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-12 border-t border-zinc-900">
+                <div
+                    class="lg:col-span-5 relative aspect-[4/3] bg-zinc-900 border border-zinc-900 overflow-hidden group">
+                    <img src="images/Mercedes-V-Class-2.webp" alt="Bespoke Private Sightseeing Excursion"
+                        class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-102 group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="lg:col-span-7 space-y-5">
+                    <span class="text-[10px] tracking-widest text-zinc-600 uppercase font-bold">Heritage Leisure
+                        05</span>
+                    <h2 class="font-serif text-2xl uppercase tracking-wider text-white">Private Tour Chauffeurs</h2>
+                    <p class="text-zinc-500 text-[13px] font-light leading-relaxed normal-case">
+                        Discover the cultural luxury of the United Kingdom with flexible premium sightseeing
+                        itineraries. Our knowledgeable chauffeurs guide you seamlessly across Central London sights, the
+                        Cotswolds, Oxford, Cambridge, and royal structures like Windsor Castle with elite custom pacing.
+                    </p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-zinc-400 text-xs tracking-wide font-light">
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Tailored Flexible Itineraries</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Local Route Specialists</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 6: Business Class Transport -->
+            <div id="business-class"
+                class="scroll-mt-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-12 border-t border-zinc-900">
+                <div class="lg:col-span-7 space-y-5 order-2 lg:order-1">
+                    <span class="text-[10px] tracking-widest text-zinc-600 uppercase font-bold">Corporate Fleet
+                        06</span>
+                    <h2 class="font-serif text-2xl uppercase tracking-wider text-white">Business Class Transport</h2>
+                    <p class="text-zinc-500 text-[13px] font-light leading-relaxed normal-case">
+                        Effortless corporate logistics dedicated to business professionals and corporate travel
+                        managers. Perfect for reliable airport connections, rapid financial district transits, and
+                        regular corporate hub-to-hub meetings powered by immaculate Mercedes E-Class and premium saloon
+                        configurations.
+                    </p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-zinc-400 text-xs tracking-wide font-light">
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>On-Board Corporate WiFi Setup</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Monthly Corporate Invoicing
+                                Available</span>
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="lg:col-span-5 relative aspect-[4/3] bg-zinc-900 border border-zinc-900 overflow-hidden group order-1 lg:order-2">
+                    <img src="images/Mercedes-Vito-1.webp" alt="Corporate Fleet Saloon Network"
+                        class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-102 group-hover:grayscale-0 transition duration-500">
+                </div>
+            </div>
+
+            <!-- Service 7: First Class Prestige -->
+            <div id="first-class"
+                class="scroll-mt-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-12 border-t border-zinc-900">
+                <div
+                    class="lg:col-span-5 relative aspect-[4/3] bg-zinc-900 border border-zinc-900 overflow-hidden group">
+                    <img src="images/Mercedes-s-Class-2.webp" alt="Ultra VVIP Diplomatic Presentation Car"
+                        class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-102 group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="lg:col-span-7 space-y-5">
+                    <span class="text-[10px] tracking-widest text-zinc-600 uppercase font-bold">VIP Flagship 07</span>
+                    <h2 class="font-serif text-2xl uppercase tracking-wider text-white">First Class Prestige</h2>
+                    <p class="text-zinc-500 text-[13px] font-light leading-relaxed normal-case">
+                        The ultimate elite chauffeuring experience using flagship Mercedes S-Class long-wheelbase
+                        platforms. Crafted meticulously for high-profile business magnates, international diplomats, and
+                        luxury enthusiasts who require absolute privacy, acoustic ride isolation, and premium rear-cabin
+                        luxury features.
+                    </p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-zinc-400 text-xs tracking-wide font-light">
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Chauffeurs with NDA Agreements</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Rear Luxury Cabin Controls</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 8: Corporate Roadshows -->
+            <div id="roadshows"
+                class="scroll-mt-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-12 border-t border-zinc-900">
+                <div class="lg:col-span-7 space-y-5 order-2 lg:order-1">
+                    <span class="text-[10px] tracking-widest text-zinc-600 uppercase font-bold">Multi-Stop Execution
+                        08</span>
+                    <h2 class="font-serif text-2xl uppercase tracking-wider text-white">Corporate Roadshows</h2>
+                    <p class="text-zinc-500 text-[13px] font-light leading-relaxed normal-case">
+                        Flawless coordination for high-stakes multi-city investment banking roadshows and executive
+                        panel transits. Backed by a dedicated central controller desk that actively manages route
+                        pacing, immediate timetable changes, and complex multi-car logistics in real-time.
+                    </p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-zinc-400 text-xs tracking-wide font-light">
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Central Controller Route
+                                Logistics</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Immediate Timetable Adjustments</span>
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="lg:col-span-5 relative aspect-[4/3] bg-zinc-900 border border-zinc-900 overflow-hidden group order-1 lg:order-2">
+                    <img src="images/Mercedes-Sprinter-6-Seater.webp" alt="Executive Roadshow Mobile Unit"
+                        class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-102 group-hover:grayscale-0 transition duration-500">
+                </div>
+            </div>
+
+            <!-- Service 2026 Component Addition -->
+            <!-- Service 9: Wedding & Special Events -->
+            <div id="events"
+                class="scroll-mt-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-12 border-t border-zinc-900 mb-12">
+                <div
+                    class="lg:col-span-5 relative aspect-[4/3] bg-zinc-900 border border-zinc-900 overflow-hidden group">
+                    <img src="images/minibus-3.webp" alt="Luxury Bridal Escort Car Unit"
+                        class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-102 group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="lg:col-span-7 space-y-5">
+                    <span class="text-[10px] tracking-widest text-zinc-600 uppercase font-bold">Gala Celebration
+                        09</span>
+                    <h2 class="font-serif text-2xl uppercase tracking-wider text-white">Wedding & Special Events</h2>
+                    <p class="text-zinc-500 text-[13px] font-light leading-relaxed normal-case">
+                        Add absolute poise and grandeur to your milestone celebrations, premium red-carpet events, or
+                        luxury bridal transfers. We configure highly coordinated fleet arrays, detailed timing grids,
+                        and impeccably dressed chauffeurs to ensure your VIP transit is fully immaculate.
+                    </p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-zinc-400 text-xs tracking-wide font-light">
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Custom Vehicle Ribbons &
+                                Presentation</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Dedicated Coordination Supervisor</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
         </div>
     </section>
-
     <!-- MATCHING REQUEST A QUOTE FORM (FROM IMAGE_3BEC19.PNG) -->
     <section id="quote-form-section" class="bg-zinc-950 py-20 border-t border-zinc-900 text-white scroll-mt-12">
         <div class="max-w-4xl mx-auto px-6">
@@ -298,22 +493,117 @@
         </div>
     </section>
 
-    <!-- GLOBAL FOOTER -->
-    <footer class="bg-black border-t border-zinc-900 py-12 text-center text-zinc-600 text-xs tracking-wider uppercase">
-        <div class="max-w-7xl mx-auto px-6 space-y-4">
-            <p class="text-zinc-400 font-serif tracking-widest">LONDON PRESTIGE CHAUFFEUR</p>
-            <p>&copy; 2026 London Prestige Chauffeur. All Corporate Rights Reserved.</p>
+    <!-- ================= UNIVERSAL MASTER PREMIUM FOOTER ================= -->
+    <footer class="bg-black border-t border-zinc-900 pt-16 pb-8 text-xs text-zinc-500">
+        <div
+            class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-zinc-900">
+
+            <!-- Column 1: Brand Logo, Text & Regulatory Credentials -->
+            <div class="space-y-4">
+                <!-- Logo Image Integration Box -->
+                <div class="flex items-center gap-3 pt-2 pb-2">
+                    <img src="images/logo.jpeg" alt="London Prestige Chauffeur Logo"
+                        class="h-28 sm:h-36 w-auto object-contain max-w-[280px] brightness-100 filter">
+                </div>
+                <p class="text-zinc-400 font-light leading-relaxed">
+                    Delivering professional premium bespoke chauffeur systems for high-profile clients, corporate
+                    leaders, and global travelers.
+                </p>
+                <!-- TFL / PCO License Badge -->
+                <div
+                    class="inline-block border border-zinc-800 bg-zinc-950/50 px-3 py-2 text-[10px] text-zinc-400 tracking-wider font-medium">
+                    <i class="fa-solid fa-shield-halved text-zinc-600 mr-1.5"></i> Regulated by TFL & PCO <span
+                        class="text-white font-semibold block mt-0.5">License No: 11678</span>
+                </div>
+            </div>
+
+            <!-- Column 2: Our Services -->
+            <div class="space-y-4">
+                <h4 class="text-xs font-serif uppercase tracking-[0.2em] text-white">Our Services</h4>
+                <ul class="space-y-2 font-light">
+                    <li><a href="services.html#airport-chauffeurs" class="hover:text-white transition">Airport
+                            Chauffeurs</a></li>
+                    <li><a href="services.html#airport-meet-greet" class="hover:text-white transition">Airport Meet
+                            and
+                            Greet</a></li>
+                    <li><a href="services.html#cruise-docks" class="hover:text-white transition">Cruise Docks
+                            Chauffeurs</a></li>
+                    <li><a href="services.html#european-trips" class="hover:text-white transition">European Trips
+                            Chauffeurs</a></li>
+                    <li><a href="services.html#private-tours" class="hover:text-white transition">Private Tour
+                            Chauffeurs</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: The Luxury Fleet -->
+            <div class="space-y-4">
+                <h4 class="text-xs font-serif uppercase tracking-[0.2em] text-white">The Luxury Fleet</h4>
+                <ul class="space-y-2 font-light">
+                    <li><a href="fleet.html#business-class" class="hover:text-white transition">Business Class</a>
+                    </li>
+                    <li><a href="fleet.html#first-class" class="hover:text-white transition">First Class</a></li>
+                    <li><a href="fleet.html#first-class-van" class="hover:text-white transition">First Class Van</a>
+                    </li>
+                    <li><a href="fleet.html#eco-van" class="hover:text-white transition">Eco Van+</a></li>
+                    <li><a href="fleet.html#sprinter-8" class="hover:text-white transition">Mercedes Sprinter 8
+                            Seater</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact & Social Desk (Right Side Integration) -->
+            <div class="space-y-4">
+                <h4 class="text-xs font-serif uppercase tracking-[0.2em] text-white">Contact Desk</h4>
+                <ul class="space-y-3 font-light text-zinc-400">
+                    <li class="flex items-start gap-2.5">
+                        <i class="fa-solid fa-location-dot text-zinc-600 mt-0.5"></i>
+                        <span>London Prestige Chauffeurs Ltd,<br><span class="text-white font-medium">London CR7
+                                8DP</span></span>
+                    </li>
+                    <li class="flex items-center gap-2.5">
+                        <i class="fa-solid fa-phone text-zinc-600"></i>
+                        <a href="tel:+442038277777" class="hover:text-white transition">+44 203 827 7777</a>
+                    </li>
+                    <li class="flex items-center gap-2.5">
+                        <i class="fa-solid fa-envelope text-zinc-600"></i>
+                        <a href="mailto:bookings@londonprestigechauffeur.com"
+                            class="hover:text-white transition text-zinc-300 font-medium">bookings@londonprestigechauffeur.com</a>
+                    </li>
+                </ul>
+
+                <!-- Premium Social Connect Handles -->
+                <div class="pt-2">
+                    <span
+                        class="text-[10px] uppercase tracking-[0.15em] text-zinc-600 block mb-2.5 font-semibold">Connect
+                        with us</span>
+                    <div class="flex gap-3">
+                        <a href="https://www.facebook.com/londonprestigechauffeur" target="_blank"
+                            rel="noopener noreferrer"
+                            class="w-8 h-8 border border-zinc-900 bg-zinc-950/40 flex items-center justify-center text-zinc-400 hover:text-white hover:border-white transition"
+                            title="Follow on Facebook">
+                            <i class="fa-brands fa-facebook-f text-xs"></i>
+                        </a>
+                        <a href="https://www.instagram.com/londonprestigechauffeur" target="_blank"
+                            rel="noopener noreferrer"
+                            class="w-8 h-8 border border-zinc-900 bg-zinc-950/40 flex items-center justify-center text-zinc-400 hover:text-white hover:border-white transition"
+                            title="Follow on Instagram">
+                            <i class="fa-brands fa-instagram text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Footer bar -->
+        <div
+            class="max-w-7xl mx-auto px-6 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-light">
+            <span>&copy; 2026 London Prestige Chauffeur. All Rights Reserved.</span>
+            <div class="flex gap-6">
+                <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-white transition">Terms & Conditions</a>
+            </div>
         </div>
     </footer>
-
-    <!-- Google Translator Scripts -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_element');
-        }
-    </script>
-    <script type="text/javascript"
-        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end group">
 
         <div
