@@ -35,36 +35,37 @@
         class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-zinc-900/80 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
-            <!-- BRAND LOGO -->
-            <a href="index.html" class="flex items-center space-x-2">
-                <img src="images/logo.jpg" alt="London Prestige Chauffeur" class="h-10 w-auto">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <img src="images/logo.jpeg" alt="L Badge" class="h-11 w-auto object-contain">
+                <div class="flex flex-col border-l border-zinc-800 pl-3">
+                    <span
+                        class="text-white font-serif tracking-[0.25em] text-xs sm:text-sm uppercase font-bold leading-none">London
+                        Prestige</span>
+                    <span
+                        class="text-zinc-500 tracking-[0.4em] text-[8px] sm:text-[9px] uppercase font-medium mt-1">Chauffeur</span>
+                </div>
             </a>
 
-            <!-- DESKTOP NAVIGATION LINKS, PHONE & CONTROLS -->
-            <div class="hidden lg:flex items-center space-x-7">
+            <div class="hidden lg:flex items-center space-x-6">
                 <a href="index.html" data-nav-link="index.html"
-                    class="nav-item text-[11px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition pb-1">Home</a>
+                    class="nav-item text-[11px] tracking-[0.18em] uppercase font-medium text-zinc-400 hover:text-white transition pb-1">Home</a>
                 <a href="about.html" data-nav-link="about.html"
-                    class="nav-item text-[11px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition pb-1">About
+                    class="nav-item text-[11px] tracking-[0.18em] uppercase font-medium text-zinc-400 hover:text-white transition pb-1">About
                     Us</a>
                 <a href="services.html" data-nav-link="services.html"
-                    class="nav-item text-[11px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition pb-1">Our
+                    class="nav-item text-[11px] tracking-[0.18em] uppercase font-medium text-zinc-400 hover:text-white transition pb-1">Our
                     Services</a>
                 <a href="fleet.html" data-nav-link="fleet.html"
-                    class="nav-item text-[11px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition pb-1">Our
+                    class="nav-item text-[11px] tracking-[0.18em] uppercase font-medium text-zinc-400 hover:text-white transition pb-1">Our
                     Fleet</a>
-
-                <!-- BOOK NOW -->
                 <a href="booking.html" data-nav-link="booking.html"
-                    class="nav-item text-[11px] tracking-[0.2em] uppercase font-bold text-zinc-400 hover:text-white transition pb-1">Book
+                    class="nav-item text-[11px] tracking-[0.18em] uppercase font-bold text-zinc-400 hover:text-white transition pb-1">Book
                     Now</a>
-
                 <a href="contact.html" data-nav-link="contact.html"
-                    class="nav-item text-[11px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition pb-1">Contact</a>
+                    class="nav-item text-[11px] tracking-[0.18em] uppercase font-medium text-zinc-400 hover:text-white transition pb-1">Contact</a>
 
-                <!-- DESKTOP REAL PHONE NUMBER -->
                 <a href="tel:+442038277777"
-                    class="text-[11px] tracking-[0.15em] text-zinc-300 hover:text-white font-medium flex items-center space-x-2 border-l border-zinc-800 pl-6 transition">
+                    class="text-[11px] tracking-[0.15em] text-zinc-300 hover:text-white font-medium flex items-center space-x-2 border-l border-zinc-800 pl-5 transition">
                     <svg class="w-3.5 h-3.5 text-zinc-500 fill-current" viewBox="0 0 24 24">
                         <path
                             d="M21.384 17.791l-3.75-2.25a1 1 0 00-1.214.214l-1.573 1.573c-2.493-1.32-4.526-3.353-5.846-5.846l1.573-1.573a1 1 0 00.214-1.214l-2.25-3.75a1 1 0 00-1.127-.503l-4.5 1A1 1 0 002 6.429c0 9.704 7.867 17.571 17.571 17.571a1 1 0 00.996-.801l1-4.5a1 1 0 00-.503-1.127z" />
@@ -72,13 +73,10 @@
                     <span>+44 203 827 7777</span>
                 </a>
 
-                <!-- GOOGLE TRANSLATOR DESKTOP CONTAINER -->
-                <div id="google_translate_element" class="premium-translator-wrapper inline-block min-w-[120px]"></div>
+                <div id="google_translate_element" class="premium-translator-wrapper inline-block ml-2 scale-95"></div>
             </div>
 
-            <!-- MOBILE CONTROLS (Phone Icon + Translator + Hamburger) -->
             <div class="flex items-center space-x-4 lg:hidden">
-                <!-- MOBILE QUICK CALL BUTTON -->
                 <a href="tel:+442038277777" class="text-zinc-400 hover:text-white p-1" aria-label="Call Chauffeur Desk">
                     <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                         <path
@@ -86,10 +84,8 @@
                     </svg>
                 </a>
 
-                <!-- GOOGLE TRANSLATOR MOBILE CONTAINER -->
                 <div id="google_translate_element_mobile" class="mobile-translator-wrapper scale-90"></div>
 
-                <!-- HAMBURGER BUTTON -->
                 <button id="mobile-menu-btn" class="text-zinc-400 hover:text-white focus:outline-none"
                     aria-label="Toggle Menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -101,7 +97,6 @@
 
         </div>
 
-        <!-- MOBILE DROP DOWN DRAWER -->
         <div id="mobile-drawer" class="hidden lg:hidden bg-zinc-950 border-b border-zinc-900 px-6 py-6 space-y-4">
             <a href="index.html" data-nav-link="index.html"
                 class="nav-item block text-[12px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition py-2">Home</a>
@@ -122,32 +117,25 @@
         </div>
     </nav>
 
-    <!-- DYNAMIC HIGHLIGHT + TOGGLE ENGINE -->
     <script>
-        // 1. Hamburger Open/Close Mechanism
+        // 1. Hamburger Mechanism
         const btn = document.getElementById('mobile-menu-btn');
         const drawer = document.getElementById('mobile-drawer');
         if (btn && drawer) {
-            btn.addEventListener('click', () => {
-                drawer.classList.toggle('hidden');
-            });
+            btn.addEventListener('click', () => { drawer.classList.toggle('hidden'); });
         }
 
-        // 2. Intelligent Auto Active Link Detection
+        // 2. Navigation Auto-Highlight Engine
         const currentPath = window.location.pathname.split("/").pop();
         const defaultPage = currentPath === "" ? "index.html" : currentPath;
 
         document.querySelectorAll('.nav-item').forEach(link => {
             if (link.getAttribute('data-nav-link') === defaultPage) {
-                // Apply white clean active state
                 link.classList.remove('text-zinc-400');
                 link.classList.add('text-white', 'font-bold');
-
-                // If desktop wrapper link, add the border indicator
                 if (!link.classList.contains('block')) {
                     link.classList.add('border-b', 'border-white');
                 } else {
-                    // Mobile layout alignment highlighting
                     link.classList.add('bg-zinc-900/40', 'px-3', 'border-l-2', 'border-white');
                 }
             }
@@ -155,6 +143,7 @@
     </script>
 
     <style>
+        /* Premium Google Translator Styling Override */
         .goog-te-gadget-simple {
             background-color: transparent !important;
             border: 1px solid #27272a !important;
@@ -166,6 +155,7 @@
             color: #a1a1aa !important;
             font-size: 11px !important;
             text-transform: uppercase !important;
+            font-weight: 500;
         }
 
         .goog-te-gadget-icon {
@@ -175,8 +165,7 @@
         body {
             top: 0px !important;
         }
-    </style>
-    <!-- ================= INNER HERO SECTION (London Famous Place Backdrop) ================= -->
+    </style> <!-- ================= INNER HERO SECTION (London Famous Place Backdrop) ================= -->
     <section class="relative h-[45vh] flex items-center justify-center bg-cover bg-center"
         style="background-image: linear-gradient(to top, #09090a 10%, rgba(0,0,0,0.7) 100%), url('https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1920&q=80');">
         <div class="text-center space-y-4 z-10 px-6">
