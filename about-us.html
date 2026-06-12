@@ -28,86 +28,147 @@
 
 <body class="bg-[#09090a] text-zinc-100 overflow-x-hidden antialiased">
 
-    <!-- PREMIUM HEADER WITH LOGO ICON & WORKING TRANSLATOR -->
-    <header class="bg-black/95 backdrop-blur-md sticky top-0 z-50 border-b border-zinc-900 text-white py-4 px-6">
-        <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <!-- ========================================== -->
+    <!-- GLOBAL LUXURY HEADER (DYNAMIC ACTIVE HIGHLIGHT + REAL PHONE) -->
+    <!-- ========================================== -->
+    <nav
+        class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-zinc-900/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
-            <!-- Left: Brand Identity (Logo Icon + Name) -->
-            <a href="index.html" class="flex items-center gap-3 group">
-                <img src="images/logo.1.jpeg" alt="LPC Icon"
-                    class="h-10 w-auto object-contain brightness-110 group-hover:scale-105 transition duration-300">
-                <div class="flex flex-col">
-                    <span
-                        class="font-serif text-base sm:text-lg tracking-[0.2em] font-bold uppercase leading-none text-white">London
-                        Prestige</span>
-                    <span
-                        class="text-[10px] tracking-[0.35em] uppercase text-zinc-400 font-light mt-0.5">Chauffeur</span>
-                </div>
+            <!-- BRAND LOGO -->
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="images/logo.jpg" alt="London Prestige Chauffeur" class="h-10 w-auto">
             </a>
 
-            <!-- Center: Navigation Links -->
-            <nav class="hidden lg:flex items-center gap-8 text-xs font-medium uppercase tracking-widest text-zinc-400">
-                <a href="index.html" class="text-white hover:text-white transition">Home</a>
-                <a href="about-us.html" class="hover:text-white transition">About Us</a>
-                <a href="services.html" class="hover:text-white transition">Our Services</a>
-                <a href="fleet.html" class="hover:text-white transition">Our Fleet</a>
-                <a href="contact.html" class="hover:text-white transition">Contact Us</a>
-            </nav>
+            <!-- DESKTOP NAVIGATION LINKS, PHONE & CONTROLS -->
+            <div class="hidden lg:flex items-center space-x-7">
+                <a href="index.html" data-nav-link="index.html"
+                    class="nav-item text-[11px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition pb-1">Home</a>
+                <a href="about.html" data-nav-link="about.html"
+                    class="nav-item text-[11px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition pb-1">About
+                    Us</a>
+                <a href="services.html" data-nav-link="services.html"
+                    class="nav-item text-[11px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition pb-1">Our
+                    Services</a>
+                <a href="fleet.html" data-nav-link="fleet.html"
+                    class="nav-item text-[11px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition pb-1">Our
+                    Fleet</a>
 
-            <!-- Right: Actions (Phone + Google Translate Dropdown) -->
-            <div class="flex items-center gap-4">
+                <!-- BOOK NOW -->
+                <a href="booking.html" data-nav-link="booking.html"
+                    class="nav-item text-[11px] tracking-[0.2em] uppercase font-bold text-zinc-400 hover:text-white transition pb-1">Book
+                    Now</a>
+
+                <a href="contact.html" data-nav-link="contact.html"
+                    class="nav-item text-[11px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition pb-1">Contact</a>
+
+                <!-- DESKTOP REAL PHONE NUMBER -->
                 <a href="tel:+442038277777"
-                    class="hidden sm:flex items-center gap-2 border border-zinc-800 bg-zinc-900/50 px-4 py-2 text-xs tracking-wider uppercase hover:bg-white hover:text-black transition duration-300">
-                    <i class="fa-solid fa-phone text-[10px]"></i> +44 203 827 7777
+                    class="text-[11px] tracking-[0.15em] text-zinc-300 hover:text-white font-medium flex items-center space-x-2 border-l border-zinc-800 pl-6 transition">
+                    <svg class="w-3.5 h-3.5 text-zinc-500 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M21.384 17.791l-3.75-2.25a1 1 0 00-1.214.214l-1.573 1.573c-2.493-1.32-4.526-3.353-5.846-5.846l1.573-1.573a1 1 0 00.214-1.214l-2.25-3.75a1 1 0 00-1.127-.503l-4.5 1A1 1 0 002 6.429c0 9.704 7.867 17.571 17.571 17.571a1 1 0 00.996-.801l1-4.5a1 1 0 00-.503-1.127z" />
+                    </svg>
+                    <span>+44 203 827 7777</span>
                 </a>
 
-                <!-- Functional Google Translate Widget Wrapper -->
-                <div
-                    class="relative flex items-center bg-zinc-900 border border-zinc-800 px-2 py-1.5 rounded text-white text-xs">
-                    <i class="fa-solid fa-globe text-zinc-400 mr-1.5 text-xs"></i>
-                    <div id="google_element"></div>
-                </div>
+                <!-- GOOGLE TRANSLATOR DESKTOP CONTAINER -->
+                <div id="google_translate_element" class="premium-translator-wrapper inline-block min-w-[120px]"></div>
+            </div>
+
+            <!-- MOBILE CONTROLS (Phone Icon + Translator + Hamburger) -->
+            <div class="flex items-center space-x-4 lg:hidden">
+                <!-- MOBILE QUICK CALL BUTTON -->
+                <a href="tel:+442038277777" class="text-zinc-400 hover:text-white p-1" aria-label="Call Chauffeur Desk">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M21.384 17.791l-3.75-2.25a1 1 0 00-1.214.214l-1.573 1.573c-2.493-1.32-4.526-3.353-5.846-5.846l1.573-1.573a1 1 0 00.214-1.214l-2.25-3.75a1 1 0 00-1.127-.503l-4.5 1A1 1 0 002 6.429c0 9.704 7.867 17.571 17.571 17.571a1 1 0 00.996-.801l1-4.5a1 1 0 00-.503-1.127z" />
+                    </svg>
+                </a>
+
+                <!-- GOOGLE TRANSLATOR MOBILE CONTAINER -->
+                <div id="google_translate_element_mobile" class="mobile-translator-wrapper scale-90"></div>
+
+                <!-- HAMBURGER BUTTON -->
+                <button id="mobile-menu-btn" class="text-zinc-400 hover:text-white focus:outline-none"
+                    aria-label="Toggle Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
 
         </div>
-    </header>
 
-    <!-- Google Translate Real-Time Execution Script (Paste this right before the closing </body> tag in all files) -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_element');
+        <!-- MOBILE DROP DOWN DRAWER -->
+        <div id="mobile-drawer" class="hidden lg:hidden bg-zinc-950 border-b border-zinc-900 px-6 py-6 space-y-4">
+            <a href="index.html" data-nav-link="index.html"
+                class="nav-item block text-[12px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition py-2">Home</a>
+            <a href="about.html" data-nav-link="about.html"
+                class="nav-item block text-[12px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition py-2">About
+                Us</a>
+            <a href="services.html" data-nav-link="services.html"
+                class="nav-item block text-[12px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition py-2">Our
+                Services</a>
+            <a href="fleet.html" data-nav-link="fleet.html"
+                class="nav-item block text-[12px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition py-2">Our
+                Fleet</a>
+            <a href="booking.html" data-nav-link="booking.html"
+                class="nav-item block text-[12px] tracking-[0.2em] uppercase font-bold text-zinc-400 hover:text-white transition py-2">Book
+                Now</a>
+            <a href="contact.html" data-nav-link="contact.html"
+                class="nav-item block text-[12px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition py-2">Contact</a>
+        </div>
+    </nav>
+
+    <!-- DYNAMIC HIGHLIGHT + TOGGLE ENGINE -->
+    <script>
+        // 1. Hamburger Open/Close Mechanism
+        const btn = document.getElementById('mobile-menu-btn');
+        const drawer = document.getElementById('mobile-drawer');
+        if (btn && drawer) {
+            btn.addEventListener('click', () => {
+                drawer.classList.toggle('hidden');
+            });
         }
-    </script>
-    <script type="text/javascript"
-        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-    <!-- Custom Styling to make Google Translate look sleek & match the premium dark theme -->
+        // 2. Intelligent Auto Active Link Detection
+        const currentPath = window.location.pathname.split("/").pop();
+        const defaultPage = currentPath === "" ? "index.html" : currentPath;
+
+        document.querySelectorAll('.nav-item').forEach(link => {
+            if (link.getAttribute('data-nav-link') === defaultPage) {
+                // Apply white clean active state
+                link.classList.remove('text-zinc-400');
+                link.classList.add('text-white', 'font-bold');
+
+                // If desktop wrapper link, add the border indicator
+                if (!link.classList.contains('block')) {
+                    link.classList.add('border-b', 'border-white');
+                } else {
+                    // Mobile layout alignment highlighting
+                    link.classList.add('bg-zinc-900/40', 'px-3', 'border-l-2', 'border-white');
+                }
+            }
+        });
+    </script>
+
     <style>
         .goog-te-gadget-simple {
             background-color: transparent !important;
-            border: none !important;
-            padding: 0 !important;
-            font-family: inherit !important;
+            border: 1px solid #27272a !important;
+            padding: 4px 8px !important;
+            border-radius: 0px !important;
         }
 
         .goog-te-gadget-simple .goog-te-menu-value span {
-            color: #ffffff !important;
+            color: #a1a1aa !important;
             font-size: 11px !important;
             text-transform: uppercase !important;
-            font-weight: 500 !important;
-            letter-spacing: 0.05em !important;
         }
 
-        .goog-te-gadget-icon,
-        .goog-te-menu-value img {
-            display: none !important;
-        }
-
-        .goog-te-banner-frame {
+        .goog-te-gadget-icon {
             display: none !important;
         }
 
