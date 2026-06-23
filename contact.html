@@ -65,6 +65,8 @@
                 <a href="fleet.html" data-nav-link="fleet.html"
                     class="nav-item text-[11px] tracking-[0.18em] uppercase font-medium text-zinc-400 hover:text-white transition pb-1">Our
                     Fleet</a>
+                <a href="worldwide-services.html" data-nav-link="worldwide-services.html"
+                    class="nav-item text-[11px] tracking-[0.18em] uppercase font-medium text-zinc-400 hover:text-white transition pb-1">Worldwide</a>
                 <a href="booking.html" data-nav-link="booking.html"
                     class="nav-item text-[11px] tracking-[0.18em] uppercase font-bold text-zinc-400 hover:text-white transition pb-1">Book
                     Now</a>
@@ -116,6 +118,8 @@
             <a href="fleet.html" data-nav-link="fleet.html"
                 class="nav-item block text-[12px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition py-2">Our
                 Fleet</a>
+            <a href="worldwide-services.html" data-nav-link="worldwide-services.html"
+                class="nav-item text-[11px] tracking-[0.18em] uppercase font-medium text-zinc-400 hover:text-white transition pb-1">Worldwide</a>
             <a href="booking.html" data-nav-link="booking.html"
                 class="nav-item block text-[12px] tracking-[0.2em] uppercase font-bold text-zinc-400 hover:text-white transition py-2">Book
                 Now</a>
@@ -202,15 +206,17 @@
     <section class="bg-black py-20">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
-            <!-- LEFT COLUMN: REQUEST A QUOTE FORM (LOCKED AS REQUESTED) -->
+            <!-- LEFT COLUMN: PROFESSIONAL CONTACT INQUIRY FORM -->
             <div class="bg-zinc-950 p-8 md:p-10 border border-zinc-900 rounded">
-                <h2 class="font-serif text-2xl text-white tracking-wide">Request A Quote</h2>
-                <p class="text-xs text-zinc-500 tracking-widest uppercase mt-2 mb-8">Get An Instant Corporate Luxury
-                    Estimate</p>
+                <h2 class="font-serif text-2xl text-white tracking-wide">Connect With Us</h2>
+                <p class="text-xs text-zinc-500 tracking-widest uppercase mt-2 mb-8">
+                    Leave a message and our executive team will respond within 15 minutes
+                </p>
 
-                <form name="contact-page-quote" method="POST" data-netlify="true" class="space-y-6">
-                    <input type="hidden" name="form-name" value="contact-page-quote" />
+                <form name="contact-page-inquiry" method="POST" data-netlify="true" class="space-y-6">
+                    <input type="hidden" name="form-name" value="contact-page-inquiry" />
 
+                    <!-- Row 1: Name and Email -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Your
@@ -226,59 +232,45 @@
                         </div>
                     </div>
 
+                    <!-- Row 2: Phone Number and Subject -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label
-                                class="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Pickup
-                                Postcode</label>
-                            <input type="text" name="pickup_postcode" placeholder="e.g. W1J 9BR" required
+                            <label class="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Phone
+                                Number</label>
+                            <input type="tel" name="phone" placeholder="+44 7123 456789" required
                                 class="w-full bg-black border border-zinc-800 px-4 py-4 text-sm text-white focus:outline-none focus:border-zinc-700 rounded-none">
                         </div>
                         <div>
                             <label
-                                class="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Vehicle
-                                Required</label>
-                            <select name="vehicle_required"
+                                class="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Inquiry
+                                Type</label>
+                            <select name="inquiry_reason" required
                                 class="w-full bg-black border border-zinc-800 px-4 py-4 text-sm text-zinc-400 focus:outline-none focus:border-zinc-700 rounded-none">
-                                <option value="" disabled selected>Select Luxury Class</option>
-                                <option value="Mercedes E-Class">Mercedes-Benz E-Class</option>
-                                <option value="Mercedes S-Class">Mercedes-Benz S-Class</option>
-                                <option value="Mercedes V-Class">Mercedes-Benz V-Class</option>
-                                <option value="Mercedes Vito">Mercedes-Benz Vito</option>
-                                <option value="Sprinter 6-Seater">Sprinter JetClass (6-Seater)</option>
-                                <option value="Sprinter 8-Seater">Sprinter Grand VIP (8-Seater)</option>
+                                <option value="" disabled selected>Select Reason</option>
+                                <option value="Corporate Accounts">Corporate Accounts & Travel</option>
+                                <option value="Airport Transfers">Airport Transfers</option>
+                                <option value="Bespoke Chauffeur Booking">Bespoke Chauffeur Booking</option>
+                                <option value="Worldwide Services">Worldwide Network Inquiry</option>
+                                <option value="General Feedback">General Question</option>
                             </select>
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label
-                                class="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Pickup
-                                Date</label>
-                            <input type="date" name="pickup_date" required
-                                class="w-full bg-black border border-zinc-800 px-4 py-4 text-sm text-zinc-400 focus:outline-none focus:border-zinc-700 rounded-none">
-                        </div>
-                        <div>
-                            <label
-                                class="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Pickup
-                                Time</label>
-                            <input type="time" name="pickup_time" required
-                                class="w-full bg-black border border-zinc-800 px-4 py-4 text-sm text-zinc-400 focus:outline-none focus:border-zinc-700 rounded-none">
-                        </div>
-                    </div>
-
+                    <!-- Row 3: Message Content -->
                     <div>
-                        <label class="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Special
-                            Drop Instructions / Message</label>
-                        <textarea name="message" rows="4" placeholder="Describe any extra luggage or preferences..."
+                        <label class="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Your
+                            Message / Requirements</label>
+                        <textarea name="message" rows="5"
+                            placeholder="Please outline your travel itinerary, preferred vehicle class, or any custom arrangements..."
+                            required
                             class="w-full bg-black border border-zinc-800 px-4 py-4 text-sm text-white focus:outline-none focus:border-zinc-700 rounded-none resize-none"></textarea>
                     </div>
 
+                    <!-- Submit Button -->
                     <div class="pt-2">
                         <button type="submit"
                             class="w-full bg-white text-black text-xs font-bold uppercase tracking-widest py-4 hover:bg-zinc-200 transition duration-300 flex items-center justify-center space-x-2 cursor-pointer">
-                            <span>Request Get A Quote</span>
+                            <span>Send Message</span>
                             <span>&rarr;</span>
                         </button>
                     </div>
@@ -392,8 +384,63 @@
                         </a></li>
                 </ul>
             </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-gray-800 mt-8">
 
-            <!-- Column 4: Contact & Social Desk (Right Side Integration) -->
+                <!-- Column 4: London Airports Chauffeurs -->
+                <div>
+                    <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-4">London Airports Chauffeurs
+                    </h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="booking.html"
+                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">London
+                                Heathrow Airport Chauffeurs</a></li>
+                        <li><a href="booking.html"
+                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">London
+                                Gatwick Airport Chauffeurs</a></li>
+                        <li><a href="booking.html"
+                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">London
+                                City Airport</a></li>
+                        <li><a href="booking.html"
+                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">London
+                                Luton Airport</a></li>
+                        <li><a href="booking.html"
+                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">London
+                                Stansted Airport Chauffeurs</a></li>
+                        <li><a href="booking.html" class="hover:text-white transition-colors block py-1">London Southend
+                                Airport Chauffeurs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Private Airports Chauffeurs -->
+                <div>
+                    <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Private Airports Chauffeurs
+                    </h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="booking.html"
+                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">Windsor
+                                Suite Heathrow Chauffeurs</a></li>
+                        <li><a href="booking.html"
+                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">Signature
+                                Flight Biggin Hill Chauffeurs</a></li>
+                        <li><a href="booking.html"
+                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">Signature
+                                Flight Gatwick Chauffeurs</a></li>
+                        <li><a href="booking.html"
+                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">Farnborough
+                                Airport Chauffeurs</a></li>
+                        <li><a href="booking.html"
+                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">Blackbushe
+                                Airport Chauffeurs</a></li>
+                        <li><a href="booking.html"
+                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">RAF
+                                Northolt Jet Centre Chauffeurs</a></li>
+                        <li><a href="booking.html" class="hover:text-white transition-colors block py-1">Harrods
+                                Aviation Stansted Chauffeurs</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- Column 6: Contact & Social Desk (Right Side Integration) -->
             <div class="space-y-4">
                 <h4 class="text-xs font-serif uppercase tracking-[0.2em] text-white">Contact Desk</h4>
                 <ul class="space-y-3 font-light text-zinc-400">

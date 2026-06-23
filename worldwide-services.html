@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Allocation Terminal | London Prestige Chauffeur</title>
+    <title>About Our Legacy | London Prestige Chauffeur</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Font Awesome Icons -->
@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600&family=Playfair+Display:ital,wght=0,400;0,600;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
     <style>
         body {
@@ -22,21 +22,6 @@
 
         .font-serif {
             font-family: 'Playfair Display', serif;
-        }
-
-        /* Form inputs dynamic style override */
-        input,
-        select,
-        textarea {
-            background-color: #0d0d0f !important;
-            border-color: #1f1f23 !important;
-        }
-
-        input:focus,
-        select:focus,
-        textarea:focus {
-            border-color: #ffffff !important;
-            outline: none;
         }
     </style>
 </head>
@@ -128,6 +113,8 @@
                 Fleet</a>
             <a href="worldwide-services.html" data-nav-link="worldwide-services.html"
                 class="nav-item block text-[12px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition py-2">Worldwide</a>
+            <a href="worldwide-services.html" data-nav-link="worldwide-services.html"
+                class="nav-item block text-[12px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition py-2">Worldwide</a>
             <a href="booking.html" data-nav-link="booking.html"
                 class="nav-item block text-[12px] tracking-[0.2em] uppercase font-bold text-zinc-400 hover:text-white transition py-2">Book
                 Now</a>
@@ -185,148 +172,175 @@
             top: 0px !important;
         }
     </style>
+    <!-- ========================================== -->
+    <!-- WORLDWIDE HERO COVER (ANIMATED)            -->
+    <!-- ========================================== -->
+    <section class="relative bg-black pt-32 pb-20 border-b border-zinc-900 overflow-hidden w-full">
+        <div class="absolute inset-0 opacity-20 pointer-events-none" data-aos="zoom-out" data-aos-duration="1500">
+            <!-- Global network backdrop image -->
+            <img src="images/worldwide-bg.jpg" alt="London Prestige Worldwide Network"
+                class="w-full h-full object-cover object-center filter grayscale blur-sm">
+        </div>
 
-    <!-- ================= BOOKING CAPTION BRIEF ================= -->
-    <section class="py-16 text-center max-w-2xl mx-auto px-6 space-y-4">
-        <span class="text-[10px] tracking-[0.4em] text-zinc-500 font-bold uppercase block">Asset Reservation
-            Terminal</span>
-        <h1 class="text-3xl sm:text-4xl font-serif text-white">Reserve Your Journey</h1>
-        <div class="w-12 h-px bg-zinc-800 mx-auto my-2"></div>
-        <p class="text-zinc-400 text-xs font-light leading-relaxed">
-            Please submit your precise transit parameters below. Our dedicated global desk updates route configurations
-            dynamically and assets will be securely assigned within 15 minutes.
-        </p>
+        <div class="relative max-w-7xl mx-auto px-6 text-center space-y-4" data-aos="fade-up" data-aos-duration="1000">
+            <p class="text-zinc-500 text-[10px] tracking-[0.35em] uppercase font-bold" data-aos="fade-up"
+                data-aos-delay="200">Global Chauffeur Network</p>
+            <h1 class="font-serif text-3xl md:text-5xl uppercase tracking-[0.2em] text-white font-light"
+                data-aos="fade-up" data-aos-delay="400">Worldwide Services</h1>
+            <div class="w-16 h-[1px] bg-zinc-800 mx-auto mt-6" data-aos="fade-up" data-aos-delay="500"></div>
+            <p class="max-w-xl mx-auto text-zinc-500 font-light text-[13px] leading-relaxed normal-case"
+                data-aos="fade-up" data-aos-delay="600">
+                Premium ground transportation engineered seamlessly across major financial hubs, private airports, and
+                luxury destinations globally. Experience London Prestige standards worldwide.
+            </p>
+        </div>
     </section>
 
-    <!-- ================= NETLIFY INTEGRATED LUXURY FORM ================= -->
-    <section class="pb-28 px-6">
-        <div class="max-w-4xl mx-auto bg-[#050506] border border-zinc-900 p-8 sm:p-12 shadow-2xl">
+    <!-- ========================================== -->
+    <!-- GLOBAL DESTINATIONS SECTION                -->
+    <!-- ========================================== -->
+    <section class="bg-black text-white py-12 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 space-y-24">
 
-            <!-- Native Netlify Form Core Attributes Setup -->
-            <form name="chauffeur-booking" method="POST" data-netlify="true" class="space-y-8 text-xs tracking-wider">
-                <!-- Hidden input field required for Netlify identification processing -->
-                <input type="hidden" name="form-name" value="chauffeur-booking" />
-
-                <!-- Section 1: Client Profile -->
-                <div class="space-y-4">
-                    <h3 class="text-sm font-serif text-white tracking-widest uppercase border-b border-zinc-900 pb-2">
-                        01. Profile Credentials</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="space-y-2">
-                            <label class="text-zinc-400 uppercase text-[10px] font-semibold">Full Name *</label>
-                            <input type="text" name="client-name" required
-                                class="w-full px-4 py-3 text-white border rounded-none font-light transition">
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-zinc-400 uppercase text-[10px] font-semibold">Email *</label>
-                            <input type="email" name="client-email" required
-                                class="w-full px-4 py-3 text-white border rounded-none font-light transition">
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-zinc-400 uppercase text-[10px] font-semibold">Direct Mobile (With Country
-                                Code) *</label>
-                            <input type="tel" name="client-phone" required placeholder="+44"
-                                class="w-full px-4 py-3 text-white border rounded-none font-light transition">
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-zinc-400 uppercase text-[10px] font-semibold">Company Name
-                                (Optional)</label>
-                            <input type="text" name="client-company"
-                                class="w-full px-4 py-3 text-white border rounded-none font-light transition">
-                        </div>
-                    </div>
+            <!-- Destination 1: United Kingdom & Europe -->
+            <div id="uk-europe"
+                class="scroll-mt-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-12 border-t border-zinc-950">
+                <div class="lg:col-span-5 relative aspect-[4/3] bg-zinc-900 border border-zinc-900 overflow-hidden group"
+                    data-aos="fade-right">
+                    <img src="images/europe.jpg" alt="UK and Europe Chauffeur"
+                        class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-102 group-hover:grayscale-0 transition duration-500">
                 </div>
-
-                <!-- Section 2: Transit Metrics -->
-                <div class="space-y-4 pt-4">
-                    <h3 class="text-sm font-serif text-white tracking-widest uppercase border-b border-zinc-900 pb-2">
-                        02. Transit Logistics</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="space-y-2">
-                            <label class="text-zinc-400 uppercase text-[10px] font-semibold">Service Profile Selection
-                                *</label>
-                            <select name="service-type" required
-                                class="w-full px-4 py-3 text-white border rounded-none font-light transition appearance-none cursor-pointer">
-                                <option value="airport-transfer">Airport Chauffeurs</option>
-                                <option value="meet-greet">Airport Meet and Greet</option>
-                                <option value="cruise-docks">Cruise Docks Chauffeurs</option>
-                                <option value="european-trips">European Trips Chauffeurs</option>
-                                <option value="private-tours">Private Tour Chauffeurs</option>
-                                <option value="corporate-service">Corporate Chauffeurs</option>
-                                <option value="private-aviation">Private Airports Chauffeurs</option>
-                                <option value="wedding-escort">Wedding Chauffeurs</option>
-                            </select>
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-zinc-400 uppercase text-[10px] font-semibold">Preferred Vehicle
-                                Allocation *</label>
-                            <select name="fleet-class" required
-                                class="w-full px-4 py-3 text-white border rounded-none font-light transition appearance-none cursor-pointer">
-                                <option value="business-class">Business Class (Mercedes E-Class)</option>
-                                <option value="first-class">First Class (Mercedes S-Class)</option>
-                                <option value="first-class-van">First Class Van (Mercedes V-Class)</option>
-                                <option value="eco-van">Eco Van+ (Hybrid / EV)</option>
-                                <option value="sprinter-6">Mercedes Sprinter 6 Seater VIP Suite</option>
-                                <option value="sprinter-8">Mercedes Sprinter 8 Seater Cruiser</option>
-                            </select>
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-zinc-400 uppercase text-[10px] font-semibold">Pickup Location / Flight
-                                Number *</label>
-                            <input type="text" name="pickup-address"
-                                placeholder="e.g. Heathrow Terminal 5 or London Address" required
-                                class="w-full px-4 py-3 text-white border rounded-none font-light transition">
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-zinc-400 uppercase text-[10px] font-semibold">Dropoff Destination Address
-                                *</label>
-                            <input type="text" name="dropoff-address" placeholder="e.g. Mayfair Hotel or UK Destination"
-                                required class="w-full px-4 py-3 text-white border rounded-none font-light transition">
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-zinc-400 uppercase text-[10px] font-semibold">Schedule Date *</label>
-                            <input type="date" name="pickup-date" required
-                                class="w-full px-4 py-3 text-white border rounded-none font-light transition text-zinc-400">
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-zinc-400 uppercase text-[10px] font-semibold">Precise Pickup Time
-                                *</label>
-                            <input type="time" name="pickup-time" required
-                                class="w-full px-4 py-3 text-white border rounded-none font-light transition text-zinc-400">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Section 3: Strategic Instructions -->
-                <div class="space-y-4 pt-4">
-                    <h3 class="text-sm font-serif text-white tracking-widest uppercase border-b border-zinc-900 pb-2">
-                        03. Special Executive Protocols</h3>
-                    <div class="space-y-2">
-                        <label class="text-zinc-400 uppercase text-[10px] font-semibold">Additional Operational
-                            Directives (Optional)</label>
-                        <textarea name="special-instructions" rows="4"
-                            placeholder="Mention preferred hydration brands, baby seats requirement, NDA signoff requests or multi-route stops..."
-                            class="w-full px-4 py-3 text-white border rounded-none font-light transition resize-none"></textarea>
-                    </div>
-                </div>
-
-                <!-- Form Security disclaimer & Submission -->
-                <div class="pt-4 space-y-4">
-                    <p class="text-[10px] text-zinc-600 font-light leading-relaxed">
-                        * By processing this routing request secure terminal, you validate that transit requirements are
-                        operationally synchronized. Complete data privacy configuration is actively enforced.
+                <div class="lg:col-span-7 space-y-5" data-aos="fade-left">
+                    <span class="text-[10px] tracking-widest text-zinc-600 uppercase font-bold">Region 01</span>
+                    <h2 class="font-serif text-2xl uppercase tracking-wider text-white">United Kingdom & Europe</h2>
+                    <p class="text-zinc-500 text-[13px] font-light leading-relaxed normal-case">
+                        From our core operations in London to major European financial capitals including Paris, Milan,
+                        Frankfurt, and Geneva. We provide borderless luxury travel with professional multi-lingual
+                        chauffeurs synchronized to your exact itinerary.
                     </p>
-                    <button type="submit"
-                        class="w-full bg-white text-black py-4 font-bold uppercase tracking-[0.2em] text-xs hover:bg-zinc-200 transition duration-300 rounded-none cursor-pointer">
-                        Transmit Secure Booking Request
-                    </button>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-zinc-400 text-xs tracking-wide font-light">
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Inter-City European Transits</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Multi-Lingual Executive Drivers</span>
+                        </li>
+                    </ul>
                 </div>
+            </div>
 
-            </form>
+            <!-- Destination 2: Middle East (Dubai & Gulf) -->
+            <div id="middle-east"
+                class="scroll-mt-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-12 border-t border-zinc-900">
+                <div class="lg:col-span-7 space-y-5 order-2 lg:order-1" data-aos="fade-right">
+                    <span class="text-[10px] tracking-widest text-zinc-600 uppercase font-bold">Region 02</span>
+                    <h2 class="font-serif text-2xl uppercase tracking-wider text-white">Middle East & Gulf Hubs</h2>
+                    <p class="text-zinc-500 text-[13px] font-light leading-relaxed normal-case">
+                        Flawless luxury infrastructure operational across Dubai, Abu Dhabi, Doha, and Riyadh. Catering
+                        directly to royal delegations, corporate executives, and premium leisure travelers with high-end
+                        flagship fleets.
+                    </p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-zinc-400 text-xs tracking-wide font-light">
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Elite FBO Airport Staging</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>24/7 Diplomatic Desk Coordination</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-5 relative aspect-[4/3] bg-zinc-900 border border-zinc-900 overflow-hidden group order-1 lg:order-2"
+                    data-aos="fade-left">
+                    <img src="images/dubai.jpg" alt="Middle East Chauffeur Service"
+                        class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-102 group-hover:grayscale-0 transition duration-500">
+                </div>
+            </div>
+
+            <!-- Destination 3: North America -->
+            <div id="north-america"
+                class="scroll-mt-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-12 border-t border-zinc-900 mb-12">
+                <div class="lg:col-span-5 relative aspect-[4/3] bg-zinc-900 border border-zinc-900 overflow-hidden group"
+                    data-aos="fade-right">
+                    <img src="images/usa.jpg" alt="North America Fleet"
+                        class="w-full h-full object-cover grayscale opacity-80 group-hover:scale-102 group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="lg:col-span-7 space-y-5" data-aos="fade-left">
+                    <span class="text-[10px] tracking-widest text-zinc-600 uppercase font-bold">Region 03</span>
+                    <h2 class="font-serif text-2xl uppercase tracking-wider text-white">North America</h2>
+                    <p class="text-zinc-500 text-[13px] font-light leading-relaxed normal-case">
+                        Comprehensive premium ground logistics handling New York, Los Angeles, Miami, and Toronto.
+                        Perfectly integrated solutions for corporate roadshows, financial summits, and private aviation
+                        transfers across transatlantic flights.
+                    </p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-zinc-400 text-xs tracking-wide font-light">
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Corporate Roadshow Specialists</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span> <span>Real-Time Flight Tracking Systems</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
         </div>
     </section>
 
+    <!-- ========================================== -->
+    <!-- WORLDWIDE BOOKING/QUOTE FORM SECTIONS     -->
+    <!-- ========================================== -->
+    <section id="worldwide-quote" class="bg-zinc-950 py-20 border-t border-zinc-900 text-white scroll-mt-12">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-serif text-3xl text-white tracking-wide">Global Reservation Request</h2>
+            <p class="text-xs text-zinc-500 tracking-widest uppercase mt-2 mb-8">Book International Travel Logistics</p>
+            <div class="w-full bg-zinc-900 h-[1px] mb-8"></div>
+
+            <form name="worldwide-quote" method="POST" data-netlify="true" class="space-y-6">
+                <input type="hidden" name="form-name" value="worldwide-quote" />
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Your
+                            Name</label>
+                        <input type="text" name="name" placeholder="John Doe" required
+                            class="w-full bg-black border border-zinc-800 px-4 py-4 text-sm text-white focus:outline-none focus:border-zinc-700 rounded-none">
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Email
+                            Address</label>
+                        <input type="email" name="email" placeholder="john@example.com" required
+                            class="w-full bg-black border border-zinc-800 px-4 py-4 text-sm text-white focus:outline-none focus:border-zinc-700 rounded-none">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Target
+                            Destination (City / Country)</label>
+                        <input type="text" name="destination" placeholder="e.g. Dubai, UAE" required
+                            class="w-full bg-black border border-zinc-800 px-4 py-4 text-sm text-white focus:outline-none focus:border-zinc-700 rounded-none">
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Service
+                            Type Required</label>
+                        <select name="service_type" required
+                            class="w-full bg-black border border-zinc-800 px-4 py-4 text-sm text-white focus:outline-none focus:border-zinc-700 rounded-none appearance-none">
+                            <option value="airport_transfer">Airport Transfer</option>
+                            <option value="hourly_directed">Hourly / Directed Chauffeur</option>
+                            <option value="diplomatic_roadshow">Diplomatic / Corporate Roadshow</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="text-center pt-4">
+                    <button type="submit"
+                        class="w-full md:w-auto bg-white text-black text-xs font-bold uppercase tracking-widest px-8 py-4 hover:bg-zinc-200 transition duration-300 rounded-none">
+                        Submit Global Inquiry
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
     <!-- ================= UNIVERSAL MASTER PREMIUM FOOTER ================= -->
     <footer class="bg-black border-t border-zinc-900 pt-16 pb-8 text-xs text-zinc-500">
         <div
@@ -397,7 +411,7 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-gray-800 mt-8">
 
-                <!-- Column : London Airports Chauffeurs -->
+                <!-- Column 4: London Airports Chauffeurs -->
                 <div>
                     <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-4">London Airports Chauffeurs
                     </h4>
