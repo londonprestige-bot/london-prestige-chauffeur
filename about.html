@@ -29,7 +29,7 @@
 <body class="bg-[#09090a] text-zinc-100 overflow-x-hidden antialiased">
 
     <!-- ========================================== -->
-    <!-- GLOBAL LUXURY HEADER (DYNAMIC ACTIVE HIGHLIGHT + REAL PHONE) -->
+    <!-- GLOBAL LUXURY HEADER (DYNAMIC ACTIVE HIGHLIGHT + PREMIUM TRANSLATOR) -->
     <!-- ========================================== -->
     <nav
         class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-zinc-900/80 transition-all duration-300">
@@ -46,6 +46,7 @@
                 </div>
             </a>
 
+            <!-- Desktop Navigation Layer -->
             <div class="hidden lg:flex items-center space-x-6">
                 <a href="index.html" data-nav-link="index.html"
                     class="nav-item text-[11px] tracking-[0.18em] uppercase font-medium text-zinc-400 hover:text-white transition pb-1">Home</a>
@@ -75,9 +76,57 @@
                     <span>+44 203 827 7777</span>
                 </a>
 
-                <div id="google_translate_element" class="premium-translator-wrapper inline-block ml-2 scale-95"></div>
+                <!-- Desktop Premium Custom Dropdown -->
+                <div class="relative inline-block text-left z-[9999] ml-2" id="desktop-lang-picker">
+                    <button type="button" onclick="toggleLangDropdown('desktop-menu', 'desktop-arrow')"
+                        class="flex items-center space-x-1.5 text-zinc-400 hover:text-white transition duration-300 font-sans text-[11px] uppercase tracking-widest focus:outline-none border border-zinc-800 px-2.5 py-1.5">
+                        <span id="desktop-flag">🇬🇧</span>
+                        <span id="desktop-text" class="font-medium text-zinc-400">En</span>
+                        <svg class="w-3 h-3 text-zinc-500 transition-transform duration-300" id="desktop-arrow"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="desktop-menu"
+                        class="hidden absolute right-0 mt-2 w-36 bg-black border border-zinc-900 shadow-2xl backdrop-blur-md overflow-hidden">
+                        <div class="py-1 divide-y divide-zinc-950 max-h-64 overflow-y-auto custom-scrollbar">
+                            <a href="javascript:void(0);" onclick="changeWebsiteLanguage('en', '🇬🇧', 'En')"
+                                class="flex items-center space-x-2.5 px-3 py-2 text-zinc-400 hover:bg-zinc-900 hover:text-white transition text-[11px]"><span>🇬🇧</span>
+                                <span>English</span></a>
+                            <a href="javascript:void(0);" onclick="changeWebsiteLanguage('zh-CN', '🇨🇳', 'Ch')"
+                                class="flex items-center space-x-2.5 px-3 py-2 text-zinc-400 hover:bg-zinc-900 hover:text-white transition text-[11px]"><span>🇨🇳</span>
+                                <span>Chinese</span></a>
+                            <a href="javascript:void(0);" onclick="changeWebsiteLanguage('hi', '🇮🇳', 'Hi')"
+                                class="flex items-center space-x-2.5 px-3 py-2 text-zinc-400 hover:bg-zinc-900 hover:text-white transition text-[11px]"><span>🇮🇳</span>
+                                <span>Hindi</span></a>
+                            <a href="javascript:void(0);" onclick="changeWebsiteLanguage('ar', '🇦🇪', 'Ar')"
+                                class="flex items-center space-x-2.5 px-3 py-2 text-zinc-400 hover:bg-zinc-900 hover:text-white transition text-[11px]"><span>🇦🇪</span>
+                                <span>Arabic</span></a>
+                            <a href="javascript:void(0);" onclick="changeWebsiteLanguage('es', '🇪🇸', 'Es')"
+                                class="flex items-center space-x-2.5 px-3 py-2 text-zinc-400 hover:bg-zinc-900 hover:text-white transition text-[11px]"><span>🇪🇸</span>
+                                <span>Spanish</span></a>
+                            <a href="javascript:void(0);" onclick="changeWebsiteLanguage('ja', '🇯🇵', 'Ja')"
+                                class="flex items-center space-x-2.5 px-3 py-2 text-zinc-400 hover:bg-zinc-900 hover:text-white transition text-[11px]"><span>🇯🇵</span>
+                                <span>Japanese</span></a>
+                            <a href="javascript:void(0);" onclick="changeWebsiteLanguage('ko', '🇰🇷', 'Ko')"
+                                class="flex items-center space-x-2.5 px-3 py-2 text-zinc-400 hover:bg-zinc-900 hover:text-white transition text-[11px]"><span>🇰🇷</span>
+                                <span>Korean</span></a>
+                            <a href="javascript:void(0);" onclick="changeWebsiteLanguage('fr', '🇫🇷', 'Fr')"
+                                class="flex items-center space-x-2.5 px-3 py-2 text-zinc-400 hover:bg-zinc-900 hover:text-white transition text-[11px]"><span>🇫🇷</span>
+                                <span>French</span></a>
+                            <a href="javascript:void(0);" onclick="changeWebsiteLanguage('de', '🇩🇪', 'De')"
+                                class="flex items-center space-x-2.5 px-3 py-2 text-zinc-400 hover:bg-zinc-900 hover:text-white transition text-[11px]"><span>🇩🇪</span>
+                                <span>German</span></a>
+                            <a href="javascript:void(0);" onclick="changeWebsiteLanguage('it', '🇮🇹', 'It')"
+                                class="flex items-center space-x-2.5 px-3 py-2 text-zinc-400 hover:bg-zinc-900 hover:text-white transition text-[11px]"><span>🇮🇹</span>
+                                <span>Italian</span></a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <!-- Mobile Layout Layer -->
             <div class="flex items-center space-x-4 lg:hidden">
                 <a href="tel:+442038277777" class="text-zinc-400 hover:text-white p-1" aria-label="Call Chauffeur Desk">
                     <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -86,7 +135,53 @@
                     </svg>
                 </a>
 
-                <div id="google_translate_element_mobile" class="mobile-translator-wrapper scale-90"></div>
+                <!-- Mobile Premium Custom Dropdown -->
+                <div class="relative inline-block text-left z-[9999]" id="mobile-lang-picker">
+                    <button type="button" onclick="toggleLangDropdown('mobile-menu', 'mobile-arrow')"
+                        class="flex items-center space-x-1 text-zinc-400 hover:text-white p-1 text-[11px] font-medium uppercase tracking-wider focus:outline-none border border-zinc-900 px-2 py-1">
+                        <span id="mobile-flag">🇬🇧</span>
+                        <svg class="w-2.5 h-2.5 text-zinc-500 transition-transform duration-300 ml-1" id="mobile-arrow"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="mobile-menu"
+                        class="hidden absolute right-0 mt-2 w-32 bg-zinc-950 border border-zinc-900 shadow-2xl overflow-hidden">
+                        <div class="py-1 divide-y divide-zinc-900 max-h-48 overflow-y-auto custom-scrollbar">
+                            <a href="javascript:void(0);" onclick="changeWebsiteLanguage('en', '🇬🇧', 'En')"
+                                class="flex items-center space-x-2 px-3 py-2 text-zinc-400 hover:text-white transition text-[11px]"><span>🇬🇧</span>
+                                <span>EN</span></a>
+                            <a href="javascript:void(0);" onclick="changeWebsiteLanguage('zh-CN', '🇨🇳', 'Ch')"
+                                class="flex items-center space-x-2 px-3 py-2 text-zinc-400 hover:text-white transition text-[11px]"><span>🇨🇳</span>
+                                <span>ZH</span></a>
+                            <a href="javascript:void(0);" onclick="changeWebsiteLanguage('hi', '🇮🇳', 'Hi')"
+                                class="flex items-center space-x-2 px-3 py-2 text-zinc-400 hover:text-white transition text-[11px]"><span>🇮🇳</span>
+                                <span>HI</span></a>
+                            <a href="javascript:void(0);" onclick="changeWebsiteLanguage('ar', '🇦🇪', 'Ar')"
+                                class="flex items-center space-x-2 px-3 py-2 text-zinc-400 hover:text-white transition text-[11px]"><span>🇦🇪</span>
+                                <span>AR</span></a>
+                            <a href="javascript:void(0);" onclick="changeWebsiteLanguage('es', '🇪🇸', 'Es')"
+                                class="flex items-center space-x-2 px-3 py-2 text-zinc-400 hover:text-white transition text-[11px]"><span>🇪🇸</span>
+                                <span>ES</span></a>
+                            <a href="javascript:void(0);" onclick="changeWebsiteLanguage('ja', '🇯🇵', 'Ja')"
+                                class="flex items-center space-x-2 px-3 py-2 text-zinc-400 hover:text-white transition text-[11px]"><span>🇯🇵</span>
+                                <span>JA</span></a>
+                            <a href="javascript:void(0);" onclick="changeWebsiteLanguage('ko', '🇰🇷', 'Ko')"
+                                class="flex items-center space-x-2 px-3 py-2 text-zinc-400 hover:text-white transition text-[11px]"><span>🇰🇷</span>
+                                <span>KO</span></a>
+                            <a href="javascript:void(0);" onclick="changeWebsiteLanguage('fr', '🇫🇷', 'Fr')"
+                                class="flex items-center space-x-2 px-3 py-2 text-zinc-400 hover:text-white transition text-[11px]"><span>🇫🇷</span>
+                                <span>FR</span></a>
+                            <a href="javascript:void(0);" onclick="changeWebsiteLanguage('de', '🇩🇪', 'De')"
+                                class="flex items-center space-x-2 px-3 py-2 text-zinc-400 hover:text-white transition text-[11px]"><span>🇩🇪</span>
+                                <span>DE</span></a>
+                            <a href="javascript:void(0);" onclick="changeWebsiteLanguage('it', '🇮🇹', 'It')"
+                                class="flex items-center space-x-2 px-3 py-2 text-zinc-400 hover:text-white transition text-[11px]"><span>🇮🇹</span>
+                                <span>IT</span></a>
+                        </div>
+                    </div>
+                </div>
 
                 <button id="mobile-menu-btn" class="text-zinc-400 hover:text-white focus:outline-none"
                     aria-label="Toggle Menu">
@@ -99,6 +194,7 @@
 
         </div>
 
+        <!-- Mobile Drawer -->
         <div id="mobile-drawer" class="hidden lg:hidden bg-zinc-950 border-b border-zinc-900 px-6 py-6 space-y-4">
             <a href="index.html" data-nav-link="index.html"
                 class="nav-item block text-[12px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition py-2">Home</a>
@@ -120,6 +216,9 @@
                 class="nav-item block text-[12px] tracking-[0.2em] uppercase font-medium text-zinc-400 hover:text-white transition py-2">Contact</a>
         </div>
     </nav>
+
+    <!-- Hidden Native Google Engine Hooks -->
+    <div id="google_translate_element" class="hidden opacity-0 pointer-events-none absolute"></div>
 
     <script>
         // 1. Hamburger Mechanism
@@ -144,30 +243,81 @@
                 }
             }
         });
+
+        // 3. Premium Dual Dropdown Script Layer
+        function toggleLangDropdown(menuId, arrowId) {
+            const menu = document.getElementById(menuId);
+            const arrow = document.getElementById(arrowId);
+            menu.classList.toggle('hidden');
+            arrow.classList.toggle('rotate-180');
+        }
+
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,zh-CN,hi,ar,es,ja,ko,fr,de,it',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function changeWebsiteLanguage(langCode, flag, text) {
+            // Update Desktop UI View
+            document.getElementById('desktop-flag').innerText = flag;
+            document.getElementById('desktop-text').innerText = text;
+            // Update Mobile UI View
+            document.getElementById('mobile-flag').innerText = flag;
+
+            const googleSelect = document.querySelector('#google_translate_element select');
+            if (googleSelect) {
+                googleSelect.value = langCode;
+                googleSelect.dispatchEvent(new Event('change'));
+            }
+
+            document.getElementById('desktop-menu').classList.add('hidden');
+            document.getElementById('mobile-menu').classList.add('hidden');
+            document.getElementById('desktop-arrow').classList.remove('rotate-180');
+            document.getElementById('mobile-arrow').classList.remove('rotate-180');
+        }
+
+        // Global Outside Click Bounds Check
+        window.addEventListener('click', function (e) {
+            const dPicker = document.getElementById('desktop-lang-picker');
+            const mPicker = document.getElementById('mobile-lang-picker');
+            if (dPicker && !dPicker.contains(e.target)) {
+                document.getElementById('desktop-menu').classList.add('hidden');
+                document.getElementById('desktop-arrow').classList.remove('rotate-180');
+            }
+            if (mPicker && !mPicker.contains(e.target)) {
+                document.getElementById('mobile-menu').classList.add('hidden');
+                document.getElementById('mobile-arrow').classList.remove('rotate-180');
+            }
+        });
     </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <style>
-        /* Premium Google Translator Styling Override */
-        .goog-te-gadget-simple {
-            background-color: transparent !important;
-            border: 1px solid #27272a !important;
-            padding: 4px 8px !important;
-            border-radius: 0px !important;
-        }
-
-        .goog-te-gadget-simple .goog-te-menu-value span {
-            color: #a1a1aa !important;
-            font-size: 11px !important;
-            text-transform: uppercase !important;
-            font-weight: 500;
-        }
-
-        .goog-te-gadget-icon {
+        /* Absolute Clean Layout Polish Overrides */
+        .goog-te-banner-frame.skiptranslate,
+        .goog-te-gadget-icon,
+        .goog-text-highlight,
+        .skiptranslate iframe {
             display: none !important;
         }
 
         body {
             top: 0px !important;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #000;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #27272a;
         }
     </style>
     <!-- ========================================== -->
