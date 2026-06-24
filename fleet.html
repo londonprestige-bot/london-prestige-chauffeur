@@ -181,95 +181,46 @@
 
 
     <!-- ========================================== -->
-    <!-- PRESTIGE BESPOKE FLEET HERO SECTION        -->
+    <!-- CINEMATIC PRESTIGE HERO (NO BROKEN ICONS) -->
     <!-- ========================================== -->
-    <section class="relative bg-zinc-950 py-24 border-b border-zinc-900 overflow-hidden w-full">
-        <!-- Clean, Dark Luxury Studio Backdrop (No more yellow cars) -->
-        <div class="absolute inset-0 opacity-15 pointer-events-none">
-            <div class="absolute inset-0 bg-gradient-to-b from-black via-zinc-900/40 to-black"></div>
-            <div
-                class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-800/20 via-black to-black">
-            </div>
+    <section class="relative min-h-[75vh] flex items-center justify-center bg-black overflow-hidden w-full px-6 py-20">
+
+        <!-- Premium Animated Background Image Context -->
+        <div class="absolute inset-0 z-0">
+            <!-- Live Ultra-Luxury Black Mercedes Chauffeur Asset -->
+            <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1800&q=80"
+                alt="London Prestige Fleet Background"
+                class="w-full h-full object-cover opacity-35 scale-105 animate-[pulse_8s_infinite_alternate] filter contrast-125 brightness-75">
+            <!-- Luxury Vignette Overlays -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black"></div>
         </div>
 
-        <div class="relative max-w-7xl mx-auto px-6 text-center space-y-4 z-10">
-            <p class="text-zinc-500 text-[10px] tracking-[0.35em] uppercase font-bold" data-aos="fade-up">Bespoke Fleet
+        <!-- Content Layer Over Background -->
+        <div class="relative max-w-5xl mx-auto text-center space-y-6 z-10">
+            <p class="text-zinc-500 text-[10px] tracking-[0.4em] uppercase font-bold" data-aos="fade-up">Bespoke Fleet
                 Selection</p>
-            <h1 class="font-serif text-3xl md:text-5xl uppercase tracking-[0.2em] text-white font-light"
+
+            <!-- Writings Maintained Exactly As Requested -->
+            <h1 class="font-serif text-3xl md:text-6xl uppercase tracking-[0.2em] text-white font-light leading-tight"
                 data-aos="fade-up" data-aos-delay="200">
                 Our Luxury <span class="italic font-normal text-zinc-400">Chauffeur</span> Vehicles
             </h1>
-            <div class="w-16 h-[1px] bg-zinc-800 mx-auto mt-6" data-aos="fade-up" data-aos-delay="300"></div>
-            <p class="max-w-2xl mx-auto text-zinc-500 font-light text-[13px] leading-relaxed normal-case"
+
+            <div class="w-20 h-[1px] bg-zinc-800 mx-auto my-6" data-aos="fade-up" data-aos-delay="300"></div>
+
+            <p class="max-w-2xl mx-auto text-zinc-400 font-light text-[14px] md:text-[15px] leading-relaxed normal-case drop-shadow-md"
                 data-aos="fade-up" data-aos-delay="400">
                 Experience unmatched luxury, comfort, and safety with our meticulously maintained fleet of prestige
                 vehicles, tailored perfectly for corporate transfers, VIP events, and London airport travel.
             </p>
 
-            <!-- ========================================== -->
-            <!-- PREMIUM VEHICLE SLIDER / SELECTION ICONS   -->
-            <!-- ========================================== -->
-            <div class="pt-16 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="500">
-                <div
-                    class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 items-center justify-center border border-zinc-900 bg-black/50 p-6 backdrop-blur-sm">
-
-                    <!-- Vehicle 1: Mercedes E-Class -->
-                    <div class="flex flex-col items-center p-3 hover:bg-zinc-900/40 transition duration-300 group">
-                        <img src="images/mercedes-e-class.png" alt="Mercedes E-Class"
-                            class="h-10 w-auto object-contain brightness-75 group-hover:brightness-100 transition duration-300">
-                        <span
-                            class="text-[11px] font-medium tracking-wider text-zinc-400 mt-3 group-hover:text-white transition">E-Class</span>
-                        <span class="text-[9px] text-zinc-600 uppercase tracking-widest mt-0.5">Executive</span>
-                    </div>
-
-                    <!-- Vehicle 2: Mercedes S-Class -->
-                    <div class="flex flex-col items-center p-3 hover:bg-zinc-900/40 transition duration-300 group">
-                        <img src="images/mercedes-s-class.png" alt="Mercedes S-Class"
-                            class="h-10 w-auto object-contain brightness-75 group-hover:brightness-100 transition duration-300">
-                        <span
-                            class="text-[11px] font-medium tracking-wider text-zinc-400 mt-3 group-hover:text-white transition">S-Class</span>
-                        <span class="text-[9px] text-zinc-600 uppercase tracking-widest mt-0.5">First Class</span>
-                    </div>
-
-                    <!-- Vehicle 3: Mercedes V-Class -->
-                    <div class="flex flex-col items-center p-3 hover:bg-zinc-900/40 transition duration-300 group">
-                        <img src="images/mercedes-v-class.png" alt="Mercedes V-Class"
-                            class="h-10 w-auto object-contain brightness-75 group-hover:brightness-100 transition duration-300">
-                        <span
-                            class="text-[11px] font-medium tracking-wider text-zinc-400 mt-3 group-hover:text-white transition">V-Class</span>
-                        <span class="text-[9px] text-zinc-600 uppercase tracking-widest mt-0.5">Luxury MPV</span>
-                    </div>
-
-                    <!-- Vehicle 4: Mercedes Vito -->
-                    <div class="flex flex-col items-center p-3 hover:bg-zinc-900/40 transition duration-300 group">
-                        <img src="images/mercedes-vito.png" alt="Mercedes Vito"
-                            class="h-10 w-auto object-contain brightness-75 group-hover:brightness-100 transition duration-300">
-                        <span
-                            class="text-[11px] font-medium tracking-wider text-zinc-400 mt-3 group-hover:text-white transition">Vito</span>
-                        <span class="text-[9px] text-zinc-600 uppercase tracking-widest mt-0.5">Shuttle</span>
-                    </div>
-
-                    <!-- Vehicle 5: Sprinter 6-Seater -->
-                    <div class="flex flex-col items-center p-3 hover:bg-zinc-900/40 transition duration-300 group">
-                        <img src="images/mercedes-sprinter-6.png" alt="Mercedes Sprinter Luxury"
-                            class="h-10 w-auto object-contain brightness-75 group-hover:brightness-100 transition duration-300">
-                        <span
-                            class="text-[11px] font-medium tracking-wider text-zinc-400 mt-3 group-hover:text-white transition">Sprinter
-                            6</span>
-                        <span class="text-[9px] text-zinc-600 uppercase tracking-widest mt-0.5">VIP Suite</span>
-                    </div>
-
-                    <!-- Vehicle 6: Sprinter 8-Seater -->
-                    <div class="flex flex-col items-center p-3 hover:bg-zinc-900/40 transition duration-300 group">
-                        <img src="images/mercedes-sprinter-8.png" alt="Mercedes Sprinter Executive"
-                            class="h-10 w-auto object-contain brightness-75 group-hover:brightness-100 transition duration-300">
-                        <span
-                            class="text-[11px] font-medium tracking-wider text-zinc-400 mt-3 group-hover:text-white transition">Sprinter
-                            8</span>
-                        <span class="text-[9px] text-zinc-600 uppercase tracking-widest mt-0.5">Tourer</span>
-                    </div>
-
-                </div>
+            <!-- Premium Call to Action inside Hero -->
+            <div class="pt-8" data-aos="fade-up" data-aos-delay="500">
+                <a href="/booking.html"
+                    class="inline-block bg-white text-black text-xs font-bold uppercase tracking-widest px-8 py-4 hover:bg-zinc-200 transition duration-300">
+                    Secure Your Fleet &rarr;
+                </a>
             </div>
         </div>
     </section>
@@ -684,55 +635,40 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-gray-800 mt-8">
 
                 <!-- Column 4: London Airports Chauffeurs -->
-                <div>
-                    <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-4">London Airports Chauffeurs
-                    </h4>
-                    <ul class="space-y-2 text-xs text-gray-400">
-                        <li><a href="booking.html"
-                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">London
-                                Heathrow Airport Chauffeurs</a></li>
-                        <li><a href="booking.html"
-                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">London
-                                Gatwick Airport Chauffeurs</a></li>
-                        <li><a href="booking.html"
-                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">London
-                                City Airport</a></li>
-                        <li><a href="booking.html"
-                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">London
-                                Luton Airport</a></li>
-                        <li><a href="booking.html"
-                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">London
-                                Stansted Airport Chauffeurs</a></li>
-                        <li><a href="booking.html" class="hover:text-white transition-colors block py-1">London Southend
-                                Airport Chauffeurs</a></li>
+
+                <div class="space-y-4">
+                    <h4 class="font-serif text-xs uppercase tracking-[0.2em] text-white">London Airports</h4>
+                    <ul class="space-y-2 text-[13px] font-light text-zinc-400">
+                        <li><a href="#" class="hover:text-white transition duration-300">London Heathrow Airport
+                                Chauffeurs</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">London Gatwick Airport
+                                Chauffeurs</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">London City Airport</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">London Luton Airport</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">London Stansted Airport
+                                Chauffeurs</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">London Southend Airport
+                                Chauffeurs</a></li>
                     </ul>
                 </div>
-
                 <!-- Column 5: Private Airports Chauffeurs -->
-                <div>
-                    <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Private Airports Chauffeurs
-                    </h4>
-                    <ul class="space-y-2 text-xs text-gray-400">
-                        <li><a href="booking.html"
-                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">Windsor
-                                Suite Heathrow Chauffeurs</a></li>
-                        <li><a href="booking.html"
-                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">Signature
-                                Flight Biggin Hill Chauffeurs</a></li>
-                        <li><a href="booking.html"
-                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">Signature
-                                Flight Gatwick Chauffeurs</a></li>
-                        <li><a href="booking.html"
-                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">Farnborough
-                                Airport Chauffeurs</a></li>
-                        <li><a href="booking.html"
-                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">Blackbushe
-                                Airport Chauffeurs</a></li>
-                        <li><a href="booking.html"
-                                class="hover:text-white transition-colors block py-1 border-b border-gray-900/50">RAF
-                                Northolt Jet Centre Chauffeurs</a></li>
-                        <li><a href="booking.html" class="hover:text-white transition-colors block py-1">Harrods
-                                Aviation Stansted Chauffeurs</a></li>
+                <div class="space-y-4">
+                    <h4 class="font-serif text-xs uppercase tracking-[0.2em] text-white">Private Airports</h4>
+                    <ul class="space-y-2 text-[13px] font-light text-zinc-400">
+                        <li><a href="#" class="hover:text-white transition duration-300">Windsor Suite Heathrow
+                                Chauffeurs</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Signature Flight Biggin Hill
+                                Chauffeurs</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Signature Flight Gatwick
+                                Chauffeurs</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Farnborough Airport
+                                Chauffeurs</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Blackbushe Airport
+                                Chauffeurs</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">RAF Northolt Jet Centre
+                                Chauffeurs</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Harrods Aviation Stansted
+                                Chauffeurs</a></li>
                     </ul>
                 </div>
 
